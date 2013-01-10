@@ -1,0 +1,50 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,800);
+
+html, body {
+    height: 100%;
+}
+
+
+body {
+    margin: 0;
+    background: -webkit-linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    background: -moz-linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    background: -ms-linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    background: -o-linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    background-color: #E8EBEF;
+
+}
+.centered{position:absolute;margin-left:-400px;margin-top:-100px;top:50%;left:50%;width:800px;height:200px;}
+
+
+.depth {
+    display: block;
+    color:#394755;    
+    position: relative; width:240px;margin:0 auto;
+}
+
+.depth:before, .depth:after {
+    content: attr(title);
+    color: rgba(255,255,255,.1);
+    position: absolute;
+}
+
+h1 {
+    font-size:5em;
+    margin: 0;
+    letter-spacing: 1px;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 300;
+    font-style: light;  
+    margin: 0;
+    color: #394755!important;
+    text-align:center;
+}
+
+.depth:before { top: 1px; left: 1px }
+.depth:after  { top: 2px; left: 2px }
