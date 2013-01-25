@@ -12,7 +12,6 @@
   },
   "author": "Qraftlabs",
   "license": "BSD",
-  "gitHead": "f311fcf7fb33bc5c4f28b7c06a7f0369ee62e6f7",
   "dependencies": {
     "jade": "~0.28.1",
     "express": "~3.0.6",
@@ -20,5 +19,9 @@
     "bower": "~0.6.8",
     "nib": "~0.9.1",
     "stylus": "~0.32.0"
+  },
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.1.x"
   }
 }
