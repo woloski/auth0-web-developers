@@ -1,0 +1,22 @@
+{
+  "name": "auth0-web",
+  "version": "0.0.1",
+  "description": "auth0.com website",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha --require should"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@heroku.com:auth0-web.git"
+  },
+  "author": "Qraftlabs",
+  "license": "BSD",
+  "gitHead": "f311fcf7fb33bc5c4f28b7c06a7f0369ee62e6f7",
+  "dependencies": {
+    "jade": "~0.28.1",
+    "express": "~3.0.6",
+    "mongodb": "~1.2.10",
+    "bower": "~0.6.8"
+  }
+}
