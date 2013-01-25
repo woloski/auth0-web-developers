@@ -11,22 +11,44 @@ body
 .middle
   position     absolute 
   display      block
-  top          50%
+  top          20%
   height       200px
   margin-top   -100px
 
 .main
-  column(8)
-  offset(2)
+  column(12)
+  offset(0)
+  .carousel
+    margin-top 20px
+    .item
+      p
+        text-align center
+      pre
+        text-align left
+        column(10)
+        offset(1)
+        margin-top 10px
+        margin-bottom 10px
+      article
+        text-align center
+        margin-top 10px
+        margin-bottom 10px
+        column(10)
+        offset(1)
+        p
+          column(8)
+          offset(1)
+          line-height 1.5em
+          margin-bottom 10px
   .button-bar
-    row(8)
     margin-top 20px
     margin-bottom 60px
     margin-right 1px
-    min-height 300px
+    min-height 50px
     button
       column(4)
-      offset(2)
+      offset(4)
+    
 
 .depth
   display block
@@ -73,6 +95,11 @@ h2 {
   padding: 10px 28px;
   width: 98%
   background-color rgb(87, 173, 221);
+
+.btn.big
+  height: 60px;
+  font-size: 20px;
+
 
 .btn:hover
   color: #E8EBEF;
@@ -201,3 +228,23 @@ h2 {
     padding: 0;
     padding-top: 4px;
     padding-left: 11px;
+
+.carousel a
+  color: #ffffff
+
+.carousel .item a
+  color: #3799ca
+
+.carousel-caption
+  position: static
+  background: transparent
+
+.carousel .item > p,
+.carousel-caption p
+  font: 14px/23px 'Open Sans', sans-serif
+  text-shadow: #ffffff 0 1px 0
+  color: #333333
+  text-align: center
+
+.center-align
+  text-align: center

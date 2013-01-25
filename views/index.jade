@@ -4,6 +4,7 @@ head
   meta(charset='UTF-8')
   link(rel='stylesheet', type='text/css', href='http://fonts.googleapis.com/css?family=Open\+Sans:300,800')
   link(rel='stylesheet', type='text/css', href='/components/Font-Awesome/css/font-awesome.min.css')
+  link(rel='stylesheet', type='text/css', href='css/bootstrap.min.css')
   link(rel='stylesheet', type='text/css', href='css/home.css')
 body
 
@@ -17,11 +18,45 @@ body
           i.icon-twitter
       h1.depth(title='Auth0') Auth0
       h2 Get the enterprise to use your software
-      br
+
+      #screenshots.carousel.slide
+        .carousel-inner
+          .item.active
+            p
+              img(src='http://wbpreview.com/previews/WB03N894J/img/ipad.png', alt='ipad')
+            pre
+              code
+                &lt;script src="https://sdk.auth0.com/auth0.js#client=...key...;"&gt;&lt;/script&gt;
+                &lt;button onclick="window.Auth0.showProvisioning('/provisioning')"&gt;Connect with your company&lt;/button&gt;
+            article
+              h3.center-align Enterprise Provisioning
+              p.center-align Connect your application with the enterprise authentication system
+          .item
+            p
+              img(src='http://wbpreview.com/previews/WB03N894J/img/code.png', alt='code')
+            pre
+              code
+                &lt;a class="auth0-button" href="https://auth0.auth0.com/login?client=...key..."&gt;Sign In with Auth0&lt;/a&gt;
+                &lt;script src="https://sdk.auth0.com/auth0.js#client=...key...."&gt;&lt;/script&gt;
+            article
+              h3.center-align Enterprise Provisioning
+              p.center-align Connect your application with the enterprise authentication system
+          .item
+            p
+              img(src='http://wbpreview.com/previews/WB03N894J/img/folders.png', alt='folders')
+            pre
+              code
+                curl "https://yourapp.auth0.com/api/somecompany/users"
+            article
+              h3.center-align Enterprise Provisioning
+              p.center-align Connect your application with the enterprise authentication system
+        a.left.carousel-control(href='#screenshots', data-slide='prev') ‹
+        a.right.carousel-control(href='#screenshots', data-slide='next') ›
+
       .button-bar
-        button#sign-up-btn.btn(type='button') 
+        button#sign-up-btn.btn.big(type='button') 
           i.icon-flag 
-          | beta sign up
+          |&nbsp;Sign Up for the Beta
 
   .popup
     .overlay(style="display: none;")
@@ -47,4 +82,5 @@ body
           p We will let you know as soon as we go live.
 
   script(src='/components/jquery/jquery.min.js')
+  script(src='/components/bootstrap/js/bootstrap-carousel.js')
   script(src='/js/home.js')

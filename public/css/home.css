@@ -24,7 +24,7 @@ body {
 .middle {
   position: absolute;
   display: block;
-  top: 50%;
+  top: 20%;
   height: 200px;
   margin-top: -100px;
 }
@@ -32,22 +32,61 @@ body {
   display: inline;
   float: left;
   overflow: hidden;
+  width: 940px;
+  margin: 0 10px;
+  *width: 940px -correction;
+  *margin: 0 10px -correction;
+  margin-left: 10px;
+}
+.main .carousel {
+  margin-top: 20px;
+}
+.main .carousel .item p {
+  text-align: center;
+}
+.main .carousel .item pre {
+  text-align: left;
+  display: inline;
+  float: left;
+  overflow: hidden;
+  width: 780px;
+  margin: 0 10px;
+  *width: 780px -correction;
+  *margin: 0 10px -correction;
+  margin-left: 90px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.main .carousel .item article {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: inline;
+  float: left;
+  overflow: hidden;
+  width: 780px;
+  margin: 0 10px;
+  *width: 780px -correction;
+  *margin: 0 10px -correction;
+  margin-left: 90px;
+}
+.main .carousel .item article p {
+  display: inline;
+  float: left;
+  overflow: hidden;
   width: 620px;
   margin: 0 10px;
   *width: 620px -correction;
   *margin: 0 10px -correction;
-  margin-left: 170px;
+  margin-left: 90px;
+  line-height: 1.5em;
+  margin-bottom: 10px;
 }
 .main .button-bar {
-  display: block;
-  width: 979.9999999999999px;
-  margin: 0 -10px;
-  *width: 979.9999999999999px -correction;
-  *margin: 0 -10px -correction;
   margin-top: 20px;
   margin-bottom: 60px;
   margin-right: 1px;
-  min-height: 300px;
+  min-height: 50px;
 }
 .main .button-bar button {
   display: inline;
@@ -57,7 +96,7 @@ body {
   margin: 0 10px;
   *width: 300px -correction;
   *margin: 0 10px -correction;
-  margin-left: 170px;
+  margin-left: 330px;
 }
 .depth {
   display: block;
@@ -109,6 +148,10 @@ h2 {
   padding: 10px 28px;
   width: 98%;
   background-color: #57addd;
+}
+.btn.big {
+  height: 60px;
+  font-size: 20px;
 }
 .btn:hover {
   color: #e8ebef;
@@ -276,4 +319,24 @@ h2 {
   padding: 0;
   padding-top: 4px;
   padding-left: 11px;
+}
+.carousel a {
+  color: #fff;
+}
+.carousel .item a {
+  color: #3799ca;
+}
+.carousel-caption {
+  position: static;
+  background: transparent;
+}
+.carousel .item > p,
+.carousel-caption p {
+  font: 14px/23px 'Open Sans', sans-serif;
+  text-shadow: #fff 0 1px 0;
+  color: #333;
+  text-align: center;
+}
+.center-align {
+  text-align: center;
 }
