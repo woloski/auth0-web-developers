@@ -6,12 +6,22 @@ head
   link(rel='stylesheet', type='text/css', href='/components/Font-Awesome/css/font-awesome.min.css')
   link(rel='stylesheet', type='text/css', href='css/home.css')
 body
-  .main
-    h1.depth(title='Auth0') Auth0
-    h2 Get the enterprise to use your software
-    
-    .sign-up
-      button#sign-up-btn.btn(type='button') beta sign up
+
+
+  .middle
+    .main
+      .topbar  
+        a.btn(title='follow us on github', href='http://github.com/auth0', target='_blank')
+          i.icon-github
+        a.btn(title='follow us on twitter',, href='http://twitter.com/auth0', target='_blank')
+          i.icon-twitter
+      h1.depth(title='Auth0') Auth0
+      h2 Get the enterprise to use your software
+      br
+      .button-bar
+        button#sign-up-btn.btn(type='button') 
+          i.icon-flag 
+          | beta sign up
 
   .popup
     .overlay(style="display: none;")
@@ -20,12 +30,12 @@ body
           h1 Sign Up
           a.close(style='display: block;') Close
         .list
-          form.strategy.google-apps(style='display: block;', _lpchecked='1')
+          form.strategy.google-apps(style='display: block;')
             .email
-              label(for='google-apps_email') Your Email
-              input#google-apps_email(name='email', type='text', value='')
+              label(for='email') We will send you a notification as soon as we go live!
+              input#email(name='email', type='email', value='', placeholder='email')
               p.error  
-            button.btn(type='submit')
+            button.btn(type='submit', style="width: 150px;")
               i.icon-envelope 
               | Sign Up
   
