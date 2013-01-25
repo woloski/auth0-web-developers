@@ -37,6 +37,8 @@ app.get('/', function (req, res) {
 
 app.post('/mail', function (req, res) {
   var mails = require('./lib/mails');
+  var mailNotifier = require('./lib/mailNotifier');
+  mailNotifier.notify(req.body.email); 
   mails.save(req.body.email, function () {
     res.send(200);
   });
