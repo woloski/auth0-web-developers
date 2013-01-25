@@ -1,0 +1,8 @@
+{
+  "name": "auth0web",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "1.8.3",
+    "Font-Awesome": "https://github.com/FortAwesome/Font-Awesome.git#~3.0.1"
+  }
+}
