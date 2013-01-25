@@ -30,14 +30,21 @@ body
           h1 Sign Up
           a.close(style='display: block;') Close
         .list
-          form.strategy.google-apps(style='display: block;')
+          form#sign-up-form(style='display: block;')
             .email
               label(for='email') We will send you a notification as soon as we go live!
-              input#email(name='email', type='email', value='', placeholder='email')
+              input#email(name='email', type='email', value='', placeholder='email', required)
               p.error  
             button.btn(type='submit', style="width: 150px;")
               i.icon-envelope 
               | Sign Up
-  
+      #sign-up-done.panel
+        header
+          h1 Done!
+          a.close(style='display: block;') Close
+        .list
+          p Thank you very much for your interest.
+          p We will let you know as soon as we go live.
+
   script(src='/components/jquery/jquery.min.js')
   script(src='/js/home.js')

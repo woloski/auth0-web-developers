@@ -13,6 +13,7 @@ app.configure(function(){
   this.set('views', 'views');
 
   this.use(express.logger('dev'));
+  this.use(express.bodyParser());
   
   this.use(stylus.middleware({
     debug: process.env.NODE_ENV !== "production",
@@ -32,6 +33,13 @@ app.configure(function(){
 
 app.get('/', function (req, res) {
   res.render('index');
+});
+
+app.post('/mail', function (req, res) {
+  var mails = require('./lib/mails');
+  mails.save(req.body.email, function () {
+    res.send(200);
+  });
 });
 
 http.createServer(app).listen(port, function () {
