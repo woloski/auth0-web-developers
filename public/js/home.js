@@ -29,6 +29,8 @@ $('#sign-up-form').on('submit', function (e) {
   });
 });
 
+$('#screenshots').carousel({ interval: 20000});
+
 $('#screenshots').on('slide', function(e) {
   var which = $(e.relatedTarget).data('explain');
   $('.item-explain.active').removeClass('active');

@@ -43,41 +43,54 @@ body
         .item-explain.active.one
           article
             h3 Connect your app with your customer's users directory
-            p Allow your customers to connect with their authentication of choice, from Google Apps and Office365 to Active Directory, by adding a JavaScript widget and the API 
+            p Allow your customers to connect with their authentication of choice by adding to your application a JavaScript widget and a call to our API
           .snippet
-            p Widget
+            p Provisioning Widget
             pre.prettyprint.language-html
               code
-                | &lt;script src="https://sdk.auth0.com/auth0.js#client=...key...;"/&gt;
+                | &lt;script src="https://sdk.auth0.com/auth0.js#client=...key..." /&gt;
                 | ...
                 | &lt;button onclick="window.Auth0.showProvisioning('/provisioning')"&gt;Connect with your company&lt;/button&gt;
             p API
             pre.prettyprint.language-bsh
               code
                 | curl -d "{ name: 'company', strategy: 'adfs', options: { tenant_domain: 'company.com', adfs_server: 'adfs.company.com' } }" https://api.auth0.com/connections?access_token=...
+
         .item-explain.two
           article
-            h3 TODO
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam nulla, hendrerit aliquam laoreet a, fermentum a dolor. Nulla eu.
+            h3 Connect your app with your customer's users directory
+            p ... Your customers can choose from Google Apps and Office365 to Active Directory (more to come in the future)
           .snippet
-            p Widget
+            p Provisioning Widget
             pre.prettyprint.language-html
               code
-                | &lt;script src="https://sdk.auth0.com/auth0.js#client=...key...;"/&gt;
+                | &lt;script src="https://sdk.auth0.com/auth0.js#client=...key..." /&gt;
                 | ...
                 | &lt;button onclick="window.Auth0.showProvisioning('/provisioning')"&gt;Connect with your company&lt;/button&gt;
+            p API
+            pre.prettyprint.language-bsh
+              code
+                | curl -d "{ name: 'company', strategy: 'adfs', options: { tenant_domain: 'company.com', adfs_server: 'adfs.company.com' } }" https://api.auth0.com/connections?access_token=...
 
         .item-explain.three
           article
-            h3 TODO
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam nulla, hendrerit aliquam laoreet a, fermentum a dolor. Nulla eu.
+            h3 Single Sign On for Social and Enterprise
+            p Quickly integrate the login widget or trigger sign on programatically using the protocol (OpenID Connect / OAuth2)
           .snippet
-            p Widget
+            p Login Widget
             pre.prettyprint.language-html
               code
-                | &lt;script src="https://sdk.auth0.com/auth0.js#client=...key...;"/&gt;
+                | &lt;script src="https://sdk.auth0.com/auth0.js#client=...key..." /&gt;
                 | ...
-                | &lt;button onclick="window.Auth0.showProvisioning('/provisioning')"&gt;Connect with your company&lt;/button&gt;
+                | &lt;button onclick="window.Auth0.signIn()"&gt;Sign In&lt;/button&gt;
+            p OpenID Connect / OAuth 2
+            pre.prettyprint.language-bsh
+              code
+                | https://yourapp.auth0.com/authorize
+                | ?response_type=code
+                | &client_id=...your-id...
+                | <strong>&connection=...connection-name...</strong>
+                | &scope=openid
 
   .popup
     .overlay(style="display: none;")
