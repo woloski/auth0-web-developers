@@ -29,6 +29,12 @@ $('#sign-up-form').on('submit', function (e) {
   });
 });
 
+$('#screenshots').on('slide', function(e) {
+  var which = $(e.relatedTarget).data('explain');
+  $('.item-explain.active').removeClass('active');
+  $('.item-explain.' + which).addClass('active');
+});
+
 !function ($) {
   $(function(){
   window.prettyPrint && prettyPrint()   

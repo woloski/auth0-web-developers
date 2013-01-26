@@ -23,6 +23,7 @@ body {
 }
 .middle {
   margin-top: 50px;
+  min-height: 1100px;
 }
 .main .carousel {
   display: inline;
@@ -33,7 +34,6 @@ body {
   *width: 97.91666666666666% -correction;
   *margin: 0 1.0416666666666665% -correction;
   margin-top: 20px;
-  margin-bottom: 40px;
 }
 .main .carousel .item .explain {
   display: inline;
@@ -93,6 +93,69 @@ body {
   border-right: 1px solid #e1e1e8;
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
+}
+.main .item-explain {
+  display: inline;
+  float: left;
+  overflow: hidden;
+  width: 97.91666666666666%;
+  margin: 0 1.0416666666666665%;
+  *width: 97.91666666666666% -correction;
+  *margin: 0 1.0416666666666665% -correction;
+  margin-top: 20px;
+  display: none;
+}
+.main .item-explain article {
+  color: #616e7a;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: inline;
+  float: left;
+  overflow: hidden;
+  width: 39.58333333333333%;
+  margin: 0 1.0416666666666665%;
+  *width: 39.58333333333333% -correction;
+  *margin: 0 1.0416666666666665% -correction;
+  margin-left: 9.375%;
+}
+.main .item-explain article h3 {
+  margin-top: 0px;
+  color: #616e7a;
+}
+.main .item-explain article p {
+  line-height: 1.5em;
+  margin-bottom: 10px;
+}
+.main .item-explain .snippet {
+  margin-left: 9.375%;
+  display: inline;
+  float: left;
+  overflow: hidden;
+  width: 39.58333333333333%;
+  margin: 0 1.0416666666666665%;
+  *width: 39.58333333333333% -correction;
+  *margin: 0 1.0416666666666665% -correction;
+}
+.main .item-explain .snippet pre {
+  text-align: left;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+.main .item-explain .snippet p {
+  margin-top: 0px;
+  padding: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 0px;
+  background-color: #eee;
+  border-top: 1px solid #e1e1e8;
+  border-left: 1px solid #e1e1e8;
+  border-right: 1px solid #e1e1e8;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+.main .item-explain.active {
+  display: block;
 }
 .main .button-bar {
   margin-top: 20px;
@@ -338,6 +401,10 @@ h2 {
 .carousel-caption {
   position: static;
   background: transparent;
+}
+.carousel-control {
+  text-decoration: none;
+  line-height: 26px;
 }
 .carousel .item > p,
 .carousel-caption p {

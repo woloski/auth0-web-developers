@@ -26,55 +26,58 @@ body
       
       #screenshots.carousel.slide
         .carousel-inner
-          .item.active
+          .item.active(data-explain='one')
             p
               img(src='http://puu.sh/1SVvQ', alt='Connect enterprise authentication with your app with the Provisioning Widget')
-            .explain
-              article
-                h3 Connect your app with your customer's users directory
-                p Allow your customers to connect with their authentication of choice, from Google Apps and Office365 to Active Directory, by adding a JavaScript widget and the API 
-              .snippet
-                p Widget
-                pre.prettyprint.language-html
-                  code
-                    | &lt;script src="https://sdk.auth0.com/auth0.js#client=...key...;"/&gt;
-                    | ...
-                    | &lt;button onclick="window.Auth0.showProvisioning('/provisioning')"&gt;Connect with your company&lt;/button&gt;
-                p API
-                pre.prettyprint.language-bsh
-                  code
-                    | curl -d "{ name: 'company', strategy: 'adfs', options: { tenant_domain: 'company.com', adfs_server: 'adfs.company.com' } }" https://api.auth0.com/connections?access_token=...
-          .item
+          .item(data-explain='two')
             p
               img(src='http://puu.sh/1SVCV', alt='Select the authentication type to use')
-            .explain
-              article
-                h3 TODO
-                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam nulla, hendrerit aliquam laoreet a, fermentum a dolor. Nulla eu.
-              .snippet
-                p Widget
-                pre.prettyprint.language-html
-                  code
-                    | &lt;script src="https://sdk.auth0.com/auth0.js#client=...key...;"/&gt;
-                    | ...
-                    | &lt;button onclick="window.Auth0.showProvisioning('/provisioning')"&gt;Connect with your company&lt;/button&gt;
-          .item
+          .item(data-explain='three')
             p
               img(src='http://puu.sh/1SVZa', alt='Allow users to sign in with social providers or using their work email')
-            .explain
-              article
-                h3 TODO
-                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam nulla, hendrerit aliquam laoreet a, fermentum a dolor. Nulla eu.
-              .snippet
-                p Widget
-                pre.prettyprint.language-html
-                  code
-                    | &lt;script src="https://sdk.auth0.com/auth0.js#client=...key...;"/&gt;
-                    | ...
-                    | &lt;button onclick="window.Auth0.showProvisioning('/provisioning')"&gt;Connect with your company&lt;/button&gt;
 
         a.left.carousel-control(href='#screenshots', data-slide='prev') ‹
         a.right.carousel-control(href='#screenshots', data-slide='next') ›
+
+      #explain
+        .item-explain.active.one
+          article
+            h3 Connect your app with your customer's users directory
+            p Allow your customers to connect with their authentication of choice, from Google Apps and Office365 to Active Directory, by adding a JavaScript widget and the API 
+          .snippet
+            p Widget
+            pre.prettyprint.language-html
+              code
+                | &lt;script src="https://sdk.auth0.com/auth0.js#client=...key...;"/&gt;
+                | ...
+                | &lt;button onclick="window.Auth0.showProvisioning('/provisioning')"&gt;Connect with your company&lt;/button&gt;
+            p API
+            pre.prettyprint.language-bsh
+              code
+                | curl -d "{ name: 'company', strategy: 'adfs', options: { tenant_domain: 'company.com', adfs_server: 'adfs.company.com' } }" https://api.auth0.com/connections?access_token=...
+        .item-explain.two
+          article
+            h3 TODO
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam nulla, hendrerit aliquam laoreet a, fermentum a dolor. Nulla eu.
+          .snippet
+            p Widget
+            pre.prettyprint.language-html
+              code
+                | &lt;script src="https://sdk.auth0.com/auth0.js#client=...key...;"/&gt;
+                | ...
+                | &lt;button onclick="window.Auth0.showProvisioning('/provisioning')"&gt;Connect with your company&lt;/button&gt;
+
+        .item-explain.three
+          article
+            h3 TODO
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam nulla, hendrerit aliquam laoreet a, fermentum a dolor. Nulla eu.
+          .snippet
+            p Widget
+            pre.prettyprint.language-html
+              code
+                | &lt;script src="https://sdk.auth0.com/auth0.js#client=...key...;"/&gt;
+                | ...
+                | &lt;button onclick="window.Auth0.showProvisioning('/provisioning')"&gt;Connect with your company&lt;/button&gt;
 
   .popup
     .overlay(style="display: none;")
