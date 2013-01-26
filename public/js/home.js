@@ -28,3 +28,9 @@ $('#sign-up-form').on('submit', function (e) {
     }
   });
 });
+
+!function ($) {
+  $(function(){
+  window.prettyPrint && prettyPrint()   
+  })
+}(window.jQuery);
