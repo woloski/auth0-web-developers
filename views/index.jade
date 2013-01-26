@@ -34,10 +34,13 @@ body
               img(src='img/provisioning-step2.png', alt='Select the authentication type to use')
           .item(data-explain='three')
             p
-              img(src='img/login.png', alt='Allow users to sign in with social providers or using their work email')
+              img(src='img/login-mobile.png', alt='Allow users to sign in with social providers or using their work email')
           .item(data-explain='four')
             p
               img(src='img/querygraph.png', alt='Query the enterprise graph')
+          .item(data-explain='five')
+            p
+              img(src='img/users.png', alt='Keep control of everything on the Auth0 app')
 
         a.left.carousel-control(href='#screenshots', data-slide='prev') ‹
         a.right.carousel-control(href='#screenshots', data-slide='next') ›
@@ -110,6 +113,16 @@ body
                 |   { name: "Joan Delgado", picture: "http://...", email: "joandelgado@company.com" }, 
                 |   { name: "Jordan Raley", picture: "http://...", email: "jordan@company.com" } 
                 | ]
+        .item-explain.five
+          article
+            h3 Auditing and analytics
+            p See who has logged in, how many times and when through the Auth0 web app.
+            |
+            | Add, remove, enable/disable connections and troubleshoot errors through the UI or the API.
+          article
+            h3 Integrated SDK
+            p 
+            | Your app will be integrated in less than a couple of hours.
 
   .popup
     .overlay(style="display: none;")
