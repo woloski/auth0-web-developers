@@ -14,7 +14,7 @@ body
       .topbar  
         a.btn(title='follow us on github', href='http://github.com/auth0', target='_blank')
           i.icon-github
-        a.btn(title='follow us on twitter',, href='http://twitter.com/auth0', target='_blank')
+        a.btn(title='follow us on twitter',, href='http://twitter.com/authzero', target='_blank')
           i.icon-twitter
       h1.depth(title='Auth0') Auth0
       h2 Get the enterprise to use your software
@@ -28,13 +28,16 @@ body
         .carousel-inner
           .item.active(data-explain='one')
             p
-              img(src='http://puu.sh/1SVvQ', alt='Connect enterprise authentication with your app with the Provisioning Widget')
+              img(src='img/provisioning-step1.png', alt='Connect enterprise authentication with your app with the Provisioning Widget')
           .item(data-explain='two')
             p
-              img(src='http://puu.sh/1SVCV', alt='Select the authentication type to use')
+              img(src='img/provisioning-step2.png', alt='Select the authentication type to use')
           .item(data-explain='three')
             p
-              img(src='http://puu.sh/1SVZa', alt='Allow users to sign in with social providers or using their work email')
+              img(src='img/login.png', alt='Allow users to sign in with social providers or using their work email')
+          .item(data-explain='four')
+            p
+              img(src='img/querygraph.png', alt='Query the enterprise graph')
 
         a.left.carousel-control(href='#screenshots', data-slide='prev') ‹
         a.right.carousel-control(href='#screenshots', data-slide='next') ›
@@ -91,6 +94,22 @@ body
                 | &client_id=...your-id...
                 | <strong>&connection=...connection-name...</strong>
                 | &scope=openid
+        .item-explain.four
+          article
+            h3 Query the enterprise graph
+            p Query our unified Users API to create meaningful experiences for your enterprise customers.
+            | Support for Google Apps and Office365 totally automated and just requires the domain administrator consent.
+          .snippet
+            p API
+            pre.prettyprint.language-bsh
+              code
+                | curl "https://api.auth0.com/users/company?access_token=..."
+                | 
+                | [ 
+                |   { name: "John Doe", picture: "http://...", email: "johnd@company.com" }, 
+                |   { name: "Joan Delgado", picture: "http://...", email: "joandelgado@company.com" }, 
+                |   { name: "Jordan Raley", picture: "http://...", email: "jordan@company.com" } 
+                | ]
 
   .popup
     .overlay(style="display: none;")
