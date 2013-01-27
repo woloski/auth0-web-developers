@@ -38,11 +38,11 @@ $('#screenshots').on('slide', function(e) {
 });
 
 $(document).keydown(function(e){
-    if (e.keyCode == 37) { 
+    if (e.keyCode == 37) {
       $('#screenshots').carousel('prev');
       return false;
     }
-    if (e.keyCode == 39) { 
+    if (e.keyCode == 39) {
       $('#screenshots').carousel('next');
       return false;
     }
