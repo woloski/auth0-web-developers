@@ -226,8 +226,7 @@ h2 {
   font-size: 20px;
 }
 .btn:hover {
-  color: #e8ebef;
-  text-shadow: none;
+  color: #e2eefa;
 }
 .btn:active {
   position: relative;
