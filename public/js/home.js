@@ -37,6 +37,21 @@ $('#screenshots').on('slide', function(e) {
   $('.item-explain.' + which).addClass('active');
 });
 
+$(document).keydown(function(e){
+    if (e.keyCode == 37) { 
+      $('#screenshots').carousel('prev');
+      return false;
+    }
+    if (e.keyCode == 39) { 
+      $('#screenshots').carousel('next');
+      return false;
+    }
+});
+
+$('#screenshots img').on('click', function() {
+  $('#screenshots').carousel('next');
+});
+
 !function ($) {
   $(function(){
   window.prettyPrint && prettyPrint()   
