@@ -28,19 +28,19 @@ body
         .carousel-inner
           .item.active(data-explain='one')
             p
-              img(src='img/provisioning-step1.png', alt='Connect enterprise authentication with your app with the Provisioning Widget')
+              img(src='img/provisioning-step1.png', alt='Connect your app with enterprise authentication systems, using the Provisioning Widget')
           .item(data-explain='two')
             p
-              img(src='img/provisioning-step2.png', alt='Select the authentication type to use')
+              img(src='img/provisioning-step2.png', alt='Choose from different authentication types')
           .item(data-explain='three')
             p
-              img(src='img/login-mobile.png', alt='Allow users to sign in with social providers or using their work email')
+              img(src='img/login-mobile.png', alt='Allow users to sign in with their work credentials or with with social providers')
           .item(data-explain='four')
             p
-              img(src='img/querygraph.png', alt='Query the enterprise graph')
+              img(src='img/querygraph.png', alt='Query the Enterprise Graph')
           .item(data-explain='five')
             p
-              img(src='img/users.png', alt='Keep control of everything on the Auth0 app')
+              img(src='img/users.png', alt='Keep control of everything with the Auth0 Dashboard')
 
         a.left.carousel-control(href='#screenshots', data-slide='prev') ‹
         a.right.carousel-control(href='#screenshots', data-slide='next') ›
@@ -49,7 +49,7 @@ body
         .item-explain.active.one
           article
             h3 Connect your app with your customer's users directory
-            p Allow your customers to connect with their authentication of choice by adding to your application a JavaScript widget and a call to our API
+            p Enable your customers to use their existing authentication infrastructure, with a simple, non-invasive JavaScript based widget. Or use our API for additional flexibility and control in the provisioning process.
           .snippet
             p Provisioning Widget
             pre.prettyprint.language-html
@@ -65,7 +65,7 @@ body
         .item-explain.two
           article
             h3 Connect your app with your customer's users directory
-            p ... Your customers can choose from Google Apps and Office365 to Active Directory (more to come in the future)
+            p ...You can easily on-board customers using Google Apps, Office365 and Active Directory (more popular identity providers are coming)
           .snippet
             p Provisioning Widget
             pre.prettyprint.language-html
@@ -81,7 +81,7 @@ body
         .item-explain.three
           article
             h3 Single Sign On for Social and Enterprise
-            p Quickly integrate the login widget or trigger sign on programatically using the protocol (OpenID Connect / OAuth2)
+            p Use the Login Widget to quickly integrate SSO into your app, or trigger the login programatically using the protocol (OpenID Connect / OAuth2). We provide quickstarts and samples on all popular platforms (ASP.NET MVC, Windows 8 RT, iOS, Android, Node.js and more)
           .snippet
             p Login Widget
             pre.prettyprint.language-html
@@ -99,9 +99,9 @@ body
                 | &scope=openid
         .item-explain.four
           article
-            h3 Query the enterprise graph
+            h3 Query the Enterprise Graph
             p Query our unified Users API to create meaningful experiences for your enterprise customers.
-            | Support for Google Apps and Office365 totally automated and just requires the domain administrator consent.
+            | Support for Google Apps and Office365 with a simple consent from the domain administrator.
           .snippet
             p API
             pre.prettyprint.language-bsh
@@ -115,14 +115,14 @@ body
                 | ]
         .item-explain.five
           article
-            h3 Auditing and analytics
-            p See who has logged in, how many times and when through the Auth0 web app.
+            h3 Auditing and Analytics
+            p See who has logged in, how many times and when through the Auth0 web Dashboard.
             |
-            | Add, remove, enable/disable connections and troubleshoot errors through the UI or the API.
+            | Add, remove, enable/disable connections and troubleshoot errors through the UI or with the API.
           article
             h3 Integrated SDK
             p 
-            | Your app will be integrated in less than a couple of hours.
+            | Your app will be integrated in minutes.
 
   .popup
     .overlay(style="display: none;")
@@ -133,7 +133,7 @@ body
         .list
           form#sign-up-form(style='display: block;')
             .email
-              label(for='email') We will send you a notification as soon as we go live!
+              label(for='email') We will let you know as soon as we go live!
               input#email(name='email', type='email', value='', placeholder='email', required)
               p.error  
             button.btn(type='submit', style="width: 150px;")
@@ -144,7 +144,7 @@ body
           h1 Done!
           a.close(style='display: block;') Close
         .list
-          p Thank you very much for your interest.
+          p Thank you very much for your interest!
           p We will let you know as soon as we go live.
 
   script(src='/components/jquery/jquery.min.js')
