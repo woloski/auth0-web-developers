@@ -1,5 +1,6 @@
 $('#sign-up-btn').on('click', function (e) {
   e.preventDefault();
+  _gaq.push(['_trackEvent', 'Home', 'Click', 'Sign Up']);
   $('#sign-up').addClass('active');
   $('.overlay')
     .show()
