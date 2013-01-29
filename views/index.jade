@@ -2,6 +2,7 @@
 head
   title Auth0 | Get the enterprise to use your software
   meta(charset='UTF-8')
+  link(rel="shortcut icon", href="/img/logo-small.png")
   link(rel='stylesheet', type='text/css', href='//fonts.googleapis.com/css?family=Open\+Sans:300,600,800')
   link(rel='stylesheet', type='text/css', href='/components/Font-Awesome/css/font-awesome.min.css')
   link(rel='stylesheet', type='text/css', href='css/bootstrap.min.css')
@@ -9,23 +10,24 @@ head
   link(rel='stylesheet', type='text/css', href='/components/bootstrap/docs/assets/js/google-code-prettify/prettify.css')
 body
 
+  .header
+    .header-container
+      .logo
+      h1.depth(title='Auth0') Auth0
+      ul
+        li
+          a(href='https://docs.auth0.com') Docs
+        li
+          a(href='http://blog.auht0.com') Blog
+
+  .tagline
+    .tagline-container
+      h2 Get the enterprise to use your software
+      h3 Connect your app with Office365, Google Apps and Active Directory for Single Sign On. Query User Profiles with a simple, unified API. Know who uses your app and when.
+
   .middle
     .main
-      .topbar  
-        a.btn.label(title='Read the docs', href='https://docs.auth0.com', target='_blank')
-          i.icon-book
-          span docs
-        a.btn.label(title='Our blog', href='http://blog.auth0.com', target='_blank')
-          i.icon-file-alt
-          span blog
-        a.btn(title='Follow us on github', href='http://github.com/auth0', target='_blank')
-          i.icon-github
-        a.btn(title='Follow us on twitter', href='http://twitter.com/authzero', target='_blank')
-          i.icon-twitter
-      h1.depth(title='Auth0') Auth0
-      h2 Get the enterprise to use your software
-      h3.tagline Connect your app with Office365, Google Apps and Active Directory for Single Sign On. Query User Profiles with a simple, unified API. Know who uses your app and when.
-
+      
       #screenshots.carousel.slide
         .carousel-inner
           .item.active(data-explain='one')
@@ -137,6 +139,12 @@ body
 
       .footer
         ul
+          li 
+            a(title='Follow us on github', href='http://github.com/auth0', target='_blank')
+              i.icon-github
+          li
+            a(title='Follow us on twitter', href='http://twitter.com/authzero', target='_blank')
+              i.icon-twitter
           li 
             a(href='mailto:support@auth0.com') Contact Us
           li 
