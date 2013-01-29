@@ -30,12 +30,21 @@ $('#sign-up-form').on('submit', function (e) {
   });
 });
 
-$('#screenshots').carousel({ interval: 20000});
+$('#screenshots').carousel('pause');
 
 $('#screenshots').on('slide', function(e) {
   var which = $(e.relatedTarget).data('explain');
   $('.item-explain.active').removeClass('active');
   $('.item-explain.' + which).addClass('active');
+
+  $('#screenshots-pager i.icon-circle')
+      .removeClass('icon-circle')
+      .addClass('icon-circle-blank');
+
+
+  $('#screenshots-pager a.' + which).find('i')
+    .removeClass('icon-circle-blank')
+    .addClass('icon-circle');
 });
 
 $(document).keydown(function(e){
@@ -51,6 +60,20 @@ $(document).keydown(function(e){
 
 $('#screenshots img').on('click', function() {
   $('#screenshots').carousel('next');
+});
+
+ $("#screenshots-pager a").click(function(e){
+    var index = $(this).index();
+    $('#screenshots-pager i.icon-circle')
+      .addClass('icon-circle-blank')
+      .removeClass('icon-circle');
+
+    $(this).find('i')
+      .removeClass('icon-circle-blank')
+      .addClass('icon-circle');
+
+    $('#screenshots').carousel(index);
+    e.preventDefault();
 });
 
 !function ($) {

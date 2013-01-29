@@ -12,98 +12,107 @@ body
   .middle
     .main
       .topbar  
-        a.btn(title='Read the docs', href='https://docs.auth0.com', target='_blank')
+        a.btn.label(title='Read the docs', href='https://docs.auth0.com', target='_blank')
           i.icon-book
+          span docs
+        a.btn.label(title='Our blog', href='http://blog.auth0.com', target='_blank')
+          i.icon-file-alt
+          span blog
         a.btn(title='Follow us on github', href='http://github.com/auth0', target='_blank')
           i.icon-github
         a.btn(title='Follow us on twitter', href='http://twitter.com/authzero', target='_blank')
           i.icon-twitter
       h1.depth(title='Auth0') Auth0
       h2 Get the enterprise to use your software
+      h3.tagline We help devs to integrate their apps with the enterprise login systems without pain
 
-      .button-bar
-        button#sign-up-btn.btn.big(type='button') 
-          i.icon-flag 
-          |&nbsp;Sign Up for the Beta
-      
       #screenshots.carousel.slide
         .carousel-inner
           .item.active(data-explain='one')
             p
               img(src='img/provisioning-step1.png', alt='Connect your app with enterprise authentication systems, using the Provisioning Widget')
+            article
+              h3 Connect your app with your customer's users directory
+              p Enable your customers to use their existing authentication infrastructure, with a simple, non-invasive JavaScript based widget. Or use our API for additional flexibility and control in the provisioning process.
           .item(data-explain='two')
             p
               img(src='img/provisioning-step2.png', alt='Choose from different authentication types')
+            article
+              h3 Connect your app with your customer's users directory
+              p ...You can easily on-board customers using Google Apps, Office365 and Active Directory (more popular identity providers are coming)
           .item(data-explain='three')
             p
               img(src='img/login-mobile.png', alt='Allow users to sign in with their work credentials or with with social providers')
+            article
+              h3 Single Sign On for Social and Enterprise
+              p Use the Login Widget to quickly integrate SSO into your app, or trigger the login programatically using the protocol. We provide quickstarts and samples on all popular platforms (ASP.NET MVC, Windows 8 RT, iOS, Android, Node.js and more)
           .item(data-explain='four')
             p
               img(src='img/querygraph.png', alt='Query the Enterprise Graph')
+            article
+              h3 Query the Enterprise Graph
+              p Query our unified Users API to create meaningful experiences for your enterprise customers.
+              p Support for Google Apps and Office365 with a simple consent from the domain administrator.
           .item(data-explain='five')
             p
               img(src='img/users.png', alt='Keep control of everything with the Auth0 Dashboard')
+            article
+              h3 Auditing and Analytics
+              p See who has logged in, how many times and when through the Auth0 web Dashboard.
+              p Add, remove, enable/disable connections and troubleshoot errors through the UI or with the API.
 
-        a.left.carousel-control(href='#screenshots', data-slide='prev') ‹
-        a.right.carousel-control(href='#screenshots', data-slide='next') ›
+      #screenshots-pager
+        a.one.pager-active(href="#", data-to="one")
+          i.icon-circle
+        a.two(href="#", data-to="two")
+          i.icon-circle-blank
+        a.three(href="#", data-to="three")
+          i.icon-circle-blank
+        a.four(href="#", data-to="four")
+          i.icon-circle-blank
+        a.five(href="#", data-to="five")
+          i.icon-circle-blank
 
       #explain
         .item-explain.active.one
-          article
-            h3 Connect your app with your customer's users directory
-            p Enable your customers to use their existing authentication infrastructure, with a simple, non-invasive JavaScript based widget. Or use our API for additional flexibility and control in the provisioning process.
           .snippet
-            p Provisioning Widget
+            p Show the provisioning dialog to setup SSO
             pre.prettyprint.language-html
               code
                 | &lt;script src="https://sdk.auth0.com/auth0.js#client=...key..." /&gt;
                 | ...
                 | &lt;button onclick="window.Auth0.showProvisioning('/provisioning')"&gt;Connect with your company&lt;/button&gt;
-            p API
+            p Use the API to do setup SSO programatically
             pre.prettyprint.language-bsh
               code
                 | curl -d "{ name: 'company', strategy: 'adfs', options: { tenant_domain: 'company.com', adfs_server: 'adfs.company.com' } }" https://api.auth0.com/connections?access_token=...
 
         .item-explain.two
-          article
-            h3 Connect your app with your customer's users directory
-            p ...You can easily on-board customers using Google Apps, Office365 and Active Directory (more popular identity providers are coming)
           .snippet
-            p Provisioning Widget
+            p Show the provisioning dialog to setup SSO
             pre.prettyprint.language-html
               code
                 | &lt;script src="https://sdk.auth0.com/auth0.js#client=...key..." /&gt;
                 | ...
                 | &lt;button onclick="window.Auth0.showProvisioning('/provisioning')"&gt;Connect with your company&lt;/button&gt;
-            p API
+            p Use the API to do setup SSO programatically
             pre.prettyprint.language-bsh
               code
                 | curl -d "{ name: 'company', strategy: 'adfs', options: { tenant_domain: 'company.com', adfs_server: 'adfs.company.com' } }" https://api.auth0.com/connections?access_token=...
 
         .item-explain.three
-          article
-            h3 Single Sign On for Social and Enterprise
-            p Use the Login Widget to quickly integrate SSO into your app, or trigger the login programatically using the protocol (OpenID Connect / OAuth2). We provide quickstarts and samples on all popular platforms (ASP.NET MVC, Windows 8 RT, iOS, Android, Node.js and more)
           .snippet
-            p Login Widget
+            p Show the login dialog
             pre.prettyprint.language-html
               code
                 | &lt;script src="https://sdk.auth0.com/auth0.js#client=...key..." /&gt;
                 | ...
                 | &lt;button onclick="window.Auth0.signIn()"&gt;Sign In&lt;/button&gt;
-            p OpenID Connect / OAuth 2
+            p ... or trigger login with a link
             pre.prettyprint.language-bsh
               code
-                | https://yourapp.auth0.com/authorize
-                | ?response_type=code
-                | &client_id=...your-id...
-                | <strong>&connection=...connection-name...</strong>
-                | &scope=openid
+                | https://yourapp.auth0.com/authorize?response_type=code&connection=...connection-name...</strong>&client_id=...your-id...&scope=openid
         .item-explain.four
-          article
-            h3 Query the Enterprise Graph
-            p Query our unified Users API to create meaningful experiences for your enterprise customers.
-            | Support for Google Apps and Office365 with a simple consent from the domain administrator.
           .snippet
             p API
             pre.prettyprint.language-bsh
@@ -116,14 +125,21 @@ body
                 |   { name: "Jordan Raley", picture: "http://...", email: "jordan@company.com" } 
                 | ]
         .item-explain.five
-          article
-            h3 Auditing and Analytics
-            p See who has logged in, how many times and when through the Auth0 web Dashboard.
-            | Add, remove, enable/disable connections and troubleshoot errors through the UI or with the API.
-          article
-            h3 Integrated SDK
-            p 
-            | Your app will be integrated in minutes.
+
+      .button-bar
+        button#sign-up-btn.btn.big(type='button') 
+          i.icon-flag 
+          |&nbsp;Sign Up for the Beta
+
+      .footer
+        ul
+          li 
+            a(href='mailto:support@auth0.com') Contact Us
+          li 
+            a(href='#') Terms of Use
+          li &copy; Auth10 LLC
+      
+
 
   .popup
     .overlay(style="display: none;")
