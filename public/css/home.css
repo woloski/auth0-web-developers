@@ -51,7 +51,7 @@ body {
 .main .carousel .item article h3 {
   margin-top: 0px;
   line-height: 1.3em;
-  color: #616e7a;
+  color: #394755;
 }
 .main .carousel .item article p {
   display: inline;
@@ -160,8 +160,8 @@ body {
   margin-bottom: 10px;
 }
 .main #screenshots-pager a {
-  color: rgba(57,71,85,0.71);
-  font-size: 14px;
+  color: #394755;
+  font-size: 15px;
   text-decoration: none;
   margin: 3px;
 }
@@ -254,18 +254,18 @@ body {
   margin-left: 10px;
 }
 .tagline {
-  background-color: #f9fbff;
+  background-color: #6c87a1;
   -webkit-box-shadow: inset 0 2px 6px rgba(0,0,0,0.34);
   box-shadow: inset 0 2px 6px rgba(0,0,0,0.34);
   -webkit-box-shadow: inset 0 2px 6px rgba(0,0,0,0.34);
   -moz-box-shadow: inset 0 2px 6px rgba(0,0,0,0.34);
   -o-box-shadow: inset 0 2px 6px rgba(0,0,0,0.34);
-  border-bottom: solid 10px #7692ac;
+  border-bottom: solid 10px #294d6e;
 }
 .tagline h3 {
   font-size: 1.5em;
   font-weight: 300;
-  color: #566675;
+  color: #daedff;
   margin: 0 auto;
   margin-top: 10px;
   text-align: center;
@@ -279,7 +279,7 @@ h2 {
   font-size: 2em;
   font-weight: 300;
   margin: 0;
-  color: #768ca2;
+  color: #fff;
   text-align: center;
 }
 .depth:before {
@@ -305,7 +305,7 @@ h2 {
   border: 0;
   padding: 10px 28px;
   width: 98%;
-  background-color: #57addd;
+  background-color: #3c71a1;
 }
 .btn.big {
   height: 60px;
