@@ -17,6 +17,7 @@ body {
   background: -ms-linear-gradient(top, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 100%);
   background: linear-gradient(top, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 100%);
   background-color: #e8ebef;
+  background-image: url("/img/cream_dust.png");
   font-family: 'Open Sans';
   margin: 0;
 }
@@ -52,6 +53,7 @@ body {
   margin-top: 0px;
   line-height: 1.3em;
   color: #394755;
+  font-weight: 600;
 }
 .main .carousel .item article p {
   display: inline;
@@ -116,6 +118,7 @@ body {
   font-weight: 600;
   font-size: 14px;
   margin-bottom: 0px;
+  color: #394755;
   background-color: #eee;
   border-top: 1px solid #e1e1e8;
   border-left: 1px solid #e1e1e8;
@@ -192,6 +195,9 @@ body {
   font-weight: 300;
   list-style: none;
 }
+.main .footer ul li [class^="icon-"] {
+  font-size: 22px;
+}
 .main .footer ul li a {
   color: #999;
   text-decoration: none;
@@ -214,6 +220,7 @@ body {
 }
 .header {
   background-color: #fdfdfd;
+  background-image: url("/img/cream_dust.png");
   height: 76px;
 }
 .header-container {
@@ -228,7 +235,7 @@ body {
   display: inline;
   margin: 20px;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 600;
   list-style: none;
 }
 .header-container ul li a {
