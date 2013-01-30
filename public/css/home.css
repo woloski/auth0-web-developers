@@ -43,9 +43,9 @@ body {
   display: inline;
   float: left;
   overflow: hidden;
-  width: 31.25%;
+  width: 39.58333333333333%;
   margin: 0 1.0416666666666665%;
-  *width: 31.25% -correction;
+  *width: 39.58333333333333% -correction;
   *margin: 0 1.0416666666666665% -correction;
   margin-top: 80px;
 }
