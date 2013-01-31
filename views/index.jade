@@ -67,6 +67,38 @@ body
               p Use our API to customize the your app.
               p Add, remove, enable/disable connections and troubleshoot errors through the UI or with the API.
 
+          .item(data-explain='six')
+            .twocols
+              h3 Mobile, Native and Web apps intgeration
+              p Use our widgets and SDK to get your app on the most popular platforms (e.g. iOS, Windows 8, ASP.NET, node.js), up and running in minutes. Use the REST based API for a more customized experience.
+              article
+                .snippet
+                  p iOS
+                  pre.prettyprint.language-objc
+                    code
+                      | Auth0Client *client = [Auth0Client auth0ClientWithWidget:tenant clientId:"...your-id..." returnUrl:"...callback..."];
+                      | [client showInViewController:self allowsClose:NO withCompletionHandler:^(BOOL authenticated) { ... }
+                  p Windows 8
+                  pre.prettyprint.language-objc
+                    code
+                      | WebAuthenticationBroker.authenticateAsync(WebAuthenticationOptions.none, 'https://your-app.auth0.com/login/?client=...your-id...&amp;response_type=token', '...callback...');
+                p Explore more in the 
+                  a(href='https://docs.auth0.com') docs
+                  | ...
+              article
+                .snippet
+                  p JavaScript 
+                  pre.prettyprint.language-html
+                    code
+                      | &lt;script src="https://sdk.auth0.com/auth0.js#client=...your-id..." /&gt;
+                      | ...
+                      | &lt;button onclick="window.Auth0.signIn()"&gt;Sign In&lt;/button&gt;
+                  p HTTP
+                  pre.prettyprint.language-bsh
+                    code
+                      | https://yourapp.auth0.com/authorize?response_type=code&connection=...connection-name...</strong>&client_id=...your-id...&scope=openid
+                
+
       #screenshots-pager
         a.one.pager-active(href="#", data-to="one")
           i.icon-circle
@@ -78,8 +110,10 @@ body
           i.icon-circle-blank
         a.five(href="#", data-to="five")
           i.icon-circle-blank
+        a.six(href="#", data-to="five")
+          i.icon-circle-blank
 
-      #explain
+      #explain(style='display:none')
         .item-explain.active.one
           .snippet
             p Show the provisioning dialog to setup SSO
