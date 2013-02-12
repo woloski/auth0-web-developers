@@ -35,6 +35,10 @@ app.get('/', function (req, res) {
   res.render('index');
 });
 
+app.get('/pricing', function (req, res) {
+  res.render('pricing');
+});
+
 app.post('/mail', function (req, res) {
   var mails = require('./lib/mails');
   var mailNotifier = require('./lib/mailNotifier');

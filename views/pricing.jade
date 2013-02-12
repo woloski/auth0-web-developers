@@ -1,0 +1,120 @@
+extends layout
+
+block styles
+  link(rel='stylesheet', type='text/css', href='/components/tooltipster/css/tooltipster.css')
+
+block tagline
+  .tagline
+    .tagline-container 
+      h2 Start using it for free.
+      h3 No obligation, no credit card required.
+
+block content
+  .middle
+    .main
+      ul#plans
+        li.planItem.personal
+          h3 Basic
+          ul.details
+            li.pricing
+              strong.monthly
+                | $10
+              span per month
+            li.dItem
+              i.icon-ok-sign
+              strong 100
+              span Enterprise Users
+              i.help.icon-question-sign.tooltip(title='Up to 100 users logging in with Office365, Google Apps, Active Directory and upcoming enterprise identities (SiteMinder, RSA, Salesforce, Yammer, Otka, OneLogin, Ping, etc.)')
+            li.dItem
+              i.icon-ok-sign
+              strong 1.000
+              span Social Users
+              i.help.icon-question-sign.tooltip(title='Up to 1.000 users logging in with a social account like Gmail or Microsoft Account and upcoming social identities (Facebook, Twitter, Github, LinkedIn, etc.)')
+            li.dItem
+              i.icon-ok-sign
+              strong ∞
+              span Apps
+            li.dItem
+              i.icon-ok-sign
+              span Auditing
+          .buttons
+            button#sign-up-btn.btn.small(type='button') Sign Up
+        li.planItem.featured
+          h3 Pro
+          ul.details
+            li.pricing
+              strong.monthly
+                | $79
+              span per month
+            li.dItem
+              i.icon-ok-sign
+              strong 1.000
+              span Enterprise Users
+            li.dItem
+              i.icon-ok-sign
+              strong 50.000
+              span Social Users
+            li.dItem
+              i.icon-ok-sign
+              strong ∞
+              span Apps
+            li.dItem
+              i.icon-ok-sign
+              span Auditing
+          .buttons
+            button#sign-up-btn.btn.small(type='button') Sign Up
+        li.planItem.plus
+          h3 Enterprise
+          ul.details
+            li.pricing
+              strong.monthly
+                | Call
+              span &nbsp;
+            li.dItem
+              i.icon-ok-sign
+              strong ∞
+              span Enterprise Users
+            li.dItem
+              i.icon-ok-sign
+              strong ∞
+              span Social Users
+            li.dItem
+              i.icon-ok-sign
+              strong ∞
+              span Apps
+            li.dItem
+              i.icon-ok-sign
+              span Auditing
+          .buttons
+            button#sign-up-btn.btn.small(type='button') Contact Us
+  
+  .popup
+    .overlay(style="display: none;")
+      #sign-up.panel
+        header
+          h1 Sign Up
+          a.close(style='display: block;') Close
+        .list
+          form#sign-up-form(style='display: block;')
+            .email
+              label(for='email') We will let you know as soon as we go live!
+              input#email(name='email', type='email', value='', placeholder='your email', required)
+              p.error  
+            button.btn(type='submit', style="width: 150px;")
+              i.icon-envelope 
+              |&nbsp;Sign Up
+      #sign-up-done.panel
+        header
+          h1 Done!
+          a.close(style='display: block;') Close
+        .list
+          p Thank you very much for your interest!
+          p We will let you know as soon as we go live.
+
+block scripts
+  script(src='/components/jquery/jquery.min.js')
+  script(src='/components/bootstrap/js/bootstrap-carousel.js')
+  script(src='/components/tooltipster/js/jquery.tooltipster.min.js')
+  script(src='/js/pricing.js')
+  script(src='/components/bootstrap/docs/assets/js/google-code-prettify/prettify.js')
+

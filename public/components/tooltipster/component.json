@@ -1,0 +1,8 @@
+{
+  "name": "tooltipster",
+  "version": "2.0.2",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/iamceege/tooltipster.git"
+  }
+}
