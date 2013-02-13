@@ -1,9 +1,10 @@
 $('#sign-up-btn').on('click', function (e) {
   e.preventDefault();
   _gaq.push(['_trackEvent', 'Home', 'Click', 'Sign Up']);
-  if (window.Auth0) {
-    window.Auth0.signIn({ onestep: true, title: 'Sign Up' });
-  }
+  $('#sign-up').addClass('active');
+  $('.overlay')
+    .show()
+    .addClass('active');
 
 });
 
