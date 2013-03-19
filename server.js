@@ -39,6 +39,10 @@ app.get('/pricing', function (req, res) {
   res.render('pricing');
 });
 
+app.get('/rms', function (req, res) {
+  res.render('rms');
+});
+
 app.post('/mail', function (req, res) {
   var mails = require('./lib/mails');
   var mailNotifier = require('./lib/mailNotifier');
