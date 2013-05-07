@@ -1,0 +1,82 @@
+extends layout
+
+block title
+  title Auth0 | SharePoint Federation
+block meta
+  meta(name='description',content='Single Sign On SharePoint with SAML, Google Apps, Office 365, Active Directory, LDAP, Gmail, Twitter, Facebook, LinkedIn')
+  meta(charset='UTF-8')
+
+block tagline
+  .tagline
+    .tagline-container
+      h2 Open SharePoint to Everyone
+      h3 Use Google Apps, Office 365, and Active Directory for Single Sign On with SharePoint. Automate configuration. Use the enhanced People Picker across any identity provider.
+
+block content
+  .middle
+    .main
+      
+      #screenshots.carousel.slide
+        .carousel-inner
+          .item.active(data-explain='one')
+            p
+              img(src='img/sp-setup.png', alt='Configure SharePoint')
+            article
+              h3 Configure SharePoint in minutes.
+              p Enter your SharePoint URL in Auth0, download customized Powershell scripts to 'claims enable' SharePoint. 
+              p Frictionless setup and configuration.
+          .item(data-explain='two')
+            p
+              img(src='img/sp-sso.png', alt='SharePoint SSO')
+            article
+              h3 Single Sign On. 
+              p Allow you partners to authenticate with any supported social or enterprise identity providers.
+              p Use the Auth0 Login Widget or customize the login screen for tailored experiences. 
+          .item(data-explain='three')
+            p
+              img(src='img/sp-peoplepicker.png', alt='SharePoint People Picker')
+            article
+              h3 Validate and Search Contacts
+              p Use Auth0 Claims Provider to validate and search contacts across all identity providers.
+ 
+      #screenshots-pager
+        a.one.pager-active(href="#", data-to="one")
+          i.icon-circle
+        a.two(href="#", data-to="two")
+          i.icon-circle-blank
+        a.three(href="#", data-to="three")
+          i.icon-circle-blank
+
+      .button-bar
+        button#sign-up-btn.btn.big(type='button') 
+          | Request Invite
+
+  .popup
+    .overlay(style="display: none;")
+      #sign-up.panel
+        header
+          h1 Sign Up
+          a.close(style='display: block;') Close
+        .list
+          form#sign-up-form(style='display: block;')
+            .email
+              label(for='email') We will let you know as soon as we go live!
+              input#email(name='email', type='email', value='', placeholder='your email', required)
+              p.error  
+            button.btn(type='submit', style="width: 150px;")
+              i.icon-envelope 
+              |&nbsp;Sign Up
+      #sign-up-done.panel
+        header
+          h1 Done!
+          a.close(style='display: block;') Close
+        .list
+          p Thank you very much for your interest!
+          p We will let you know as soon as we go live.
+
+block scripts
+  script(src='https://sdk.auth0.com/auth0.js#client=zEYfpoFzUMEzilhkHilcWoNkrFfJ3hAI&amp;redirect_uri=https://app.auth0.com/callback')
+  script(src='/components/jquery/jquery.min.js')
+  script(src='/components/bootstrap/js/bootstrap-carousel.js')
+  script(src='/js/home.js')
+  script(src='/components/bootstrap/docs/assets/js/google-code-prettify/prettify.js')
