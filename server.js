@@ -47,6 +47,10 @@ app.get('/sharepoint', function (req, res) {
   res.render('sharepoint');
 });
 
+app.get('/dropbox', function (req, res) {
+  res.render('dropbox');
+});
+
 app.post('/mail', function (req, res) {
   var mails = require('./lib/mails');
   var mailNotifier = require('./lib/mailNotifier');
