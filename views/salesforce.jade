@@ -1,0 +1,74 @@
+extends layout
+
+block title
+  title Auth0 | Salesforce
+block meta
+  meta(name='description',content='Single Sign On Salesforce with SAML, Google Apps, Office 365, Active Directory, LDAP, Gmail, Twitter, Facebook, LinkedIn')
+  meta(charset='UTF-8')
+
+block tagline
+  .tagline
+    .tagline-container
+      h2 Single Sign On for Salesforce
+      h3 Connect to Salesforce with your corporate credentials. Use Active Directory, Office365, Google Apps or LDAP for Single Sign On with Salesforce in minutes.
+
+block content
+  .middle
+    .main
+      
+      #screenshots.carousel.slide
+        .carousel-inner
+          .item.active(data-explain='one')
+            p
+              img(src='img/salesforce-setup.png', alt='Configure Salesforce')
+            article
+              h3 Configure Salesforce for SSO.
+              p Enabling Salesforce SSO with Auth0 is just one checkbox away. 
+              p Enter the login URL and certificate on Salesforce and you are done.  
+          .item(data-explain='two')
+            p
+              img(src='img/salesforce-sso.png', alt='Salesforce SSO')
+            article
+              h3 Single Sign On. 
+              p Login with Active Directory, Office365, Google Apps, LDAP, SQL or your custom authentication. 
+              p Login with any Social Identity: Github, LinkedIn, Gmail, Twitter, PayPal, LiveId.
+ 
+      #screenshots-pager
+        a.one.pager-active(href="#", data-to="one")
+          i.icon-circle
+        a.two(href="#", data-to="two")
+          i.icon-circle-blank
+
+      .button-bar
+        button#sign-up-btn.btn.big(type='button') 
+          | Request Invite
+
+  .popup
+    .overlay(style="display: none;")
+      #sign-up.panel
+        header
+          h1 Sign Up
+          a.close(style='display: block;') Close
+        .list
+          form#sign-up-form(style='display: block;')
+            .email
+              label(for='email') We will let you know as soon as we go live!
+              input#email(name='email', type='email', value='', placeholder='your email', required)
+              p.error  
+            button.btn(type='submit', style="width: 150px;")
+              i.icon-envelope 
+              |&nbsp;Sign Up
+      #sign-up-done.panel
+        header
+          h1 Done!
+          a.close(style='display: block;') Close
+        .list
+          p Thank you very much for your interest!
+          p We will let you know as soon as we go live.
+
+block scripts
+  script(src='https://sdk.auth0.com/auth0.js#client=zEYfpoFzUMEzilhkHilcWoNkrFfJ3hAI&amp;redirect_uri=https://app.auth0.com/callback')
+  script(src='/components/jquery/jquery.min.js')
+  script(src='/components/bootstrap/js/bootstrap-carousel.js')
+  script(src='/js/home.js')
+  script(src='/components/bootstrap/docs/assets/js/google-code-prettify/prettify.js')

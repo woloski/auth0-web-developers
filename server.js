@@ -51,6 +51,10 @@ app.get('/dropbox', function (req, res) {
   res.render('dropbox');
 });
 
+app.get('/salesforce', function (req, res) {
+  res.render('salesforce');
+});
+
 app.post('/mail', function (req, res) {
   var mails = require('./lib/mails');
   var mailNotifier = require('./lib/mailNotifier');
