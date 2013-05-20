@@ -3,20 +3,18 @@ extends layout
 block meta
     meta(name='description',content='Connect your app with Office365, Google Apps and Active Directory for Single Sign On. Query User Profiles with a simple, unified API. Know who uses your app and when')
     meta(charset='UTF-8')
-
-block tagline
+block content
   .tagline
     .tagline-container
-      h2 Get the enterprise to use your software
-      h3 Connect your app with Office365, Google Apps and Active Directory for Single Sign On. Query User Profiles with a simple, unified API. Know who uses your app and when.
+      h2 Open your web and mobile apps to enterprises
+      h3 Connect your app with Active Directory, Office365, Google Apps for Single Sign On. Query users from any directory with a simple, unified API. Keep an audit trail of logins.
 
-block content
   .middle
     .main
       
       #screenshots.carousel.slide
         .carousel-inner
-          .item.active(data-explain='one')
+          .item(data-explain='one')
             p
               img(src='img/provisioning-step1.png', alt='Connect your app with enterprise authentication systems, using the Provisioning Widget')
             article
@@ -30,7 +28,7 @@ block content
               h3 Connect your web or mobile app with your customer's users directory
               p On-board customers using Google Apps, Office365 and Active Directory in minutes. 
               p Let Auth0 remove all the pain. Get your app securely federated in minutes.
-          .item(data-explain='three')
+          .item.active(data-explain='three')
             p
               img(src='img/login-mobile.png', alt='Allow users to sign in with their work credentials or with with their social identity')
             article
@@ -86,17 +84,17 @@ block content
                 
 
       #screenshots-pager
-        a.one.pager-active(href="#", data-to="one")
+        a.one(href="#")
+          i.icon-circle-blank
+        a.two(href="#")
+          i.icon-circle-blank
+        a.three.pager-active(href="#")
           i.icon-circle
-        a.two(href="#", data-to="two")
+        a.four(href="#")
           i.icon-circle-blank
-        a.three(href="#", data-to="three")
+        a.five(href="#")
           i.icon-circle-blank
-        a.four(href="#", data-to="four")
-          i.icon-circle-blank
-        a.five(href="#", data-to="five")
-          i.icon-circle-blank
-        a.six(href="#", data-to="five")
+        a.six(href="#")
           i.icon-circle-blank
 
       #explain(style='display:none')
@@ -152,35 +150,7 @@ block content
                 | ]
         .item-explain.five
 
-      .button-bar
-        button#sign-up-btn.btn.big(type='button') 
-          | Request Invite
-
-  .popup
-    .overlay(style="display: none;")
-      #sign-up.panel
-        header
-          h1 Sign Up
-          a.close(style='display: block;') Close
-        .list
-          form#sign-up-form(style='display: block;')
-            .email
-              label(for='email') We will let you know as soon as we go live!
-              input#email(name='email', type='email', value='', placeholder='your email', required)
-              p.error  
-            button.btn(type='submit', style="width: 150px;")
-              i.icon-envelope 
-              |&nbsp;Sign Up
-      #sign-up-done.panel
-        header
-          h1 Done!
-          a.close(style='display: block;') Close
-        .list
-          p Thank you very much for your interest!
-          p We will let you know as soon as we go live.
-
 block scripts
-  script(src='https://sdk.auth0.com/auth0.js#client=zEYfpoFzUMEzilhkHilcWoNkrFfJ3hAI&amp;redirect_uri=https://app.auth0.com/callback')
   script(src='/components/jquery/jquery.min.js')
   script(src='/components/bootstrap/js/bootstrap-carousel.js')
   script(src='/js/home.js')

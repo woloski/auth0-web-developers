@@ -12,7 +12,7 @@ body
   background linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0))
   background-color #E8EBEF
   background-image url('/img/cream_dust.png');
-  font-family 'Open Sans'
+  font-family 'Open Sans', 'HelveticaNeue'
   margin 0
 
 .middle
@@ -79,8 +79,7 @@ body
           border-left 1px solid #e1e1e8;
           border-right 1px solid #e1e1e8;
           border-top-right-radius: 4px;
-          border-top-left-radius: 4px;
-            
+          border-top-left-radius: 4px;         
   .button-bar
     column(12)
     button
@@ -88,7 +87,9 @@ body
       offset(4)
       margin-top 20px
       margin-bottom 40px
-    
+  .overlap
+    margin-top -330px
+
   #screenshots-pager
     column(12)
     text-align center
@@ -188,12 +189,13 @@ body
     margin  0 auto
     margin-top  10px
     text-align center
+  .tagline-container 
+    max-width 968px
+    margin 0 auto
+    padding 40px
+  .overlap
+    height 400px
 
-
-.tagline-container 
-  max-width 968px
-  margin 0 auto
-  padding 40px
 
 h2 {
   font-size: 2em;
@@ -228,6 +230,18 @@ h2 {
 .btn.small
   width 140px
   font-size: 14px;
+
+.btn.x-small
+  width: 70px
+  font-size: 13px
+  padding: 5px
+  margin: 5px
+
+.btn.mid
+  width: 70px
+  font-size: 14px
+  padding: 5px
+  margin-top: -3px
 
 .btn:hover
   color rgb(226, 238, 250)
@@ -459,7 +473,8 @@ code
     font-weight: 500
   .planItem
     background: #fbfbfc
-    display: inline-block
+    display: inline-table
+    height: 400px
     margin-right: -4px
     overflow: hidden
     position: relative
@@ -467,18 +482,12 @@ code
     width: 305px
     z-index: 5
     border-radius: 3px
-    -webkit-border-radius: 3px
-    -moz-border-radius: 3px
-    -o-border-radius: 3px
     box-shadow: 0 1px 9px rgba(0,0,0,0.25)
-    -webkit-box-shadow: 0 1px 9px rgba(0,0,0,0.25)
-    -moz-box-shadow: 0 1px 9px rgba(0,0,0,0.25)
-    -o-box-shadow: 0 1px 9px rgba(0,0,0,0.25)
     h3
-      background: #7f858f
+      background: rgba(51, 71, 105, 0.56)
       color: #fff
-      font-size: 1em
-      font-weight: 500
+      font-size: 1.1em
+      font-weight: 600
       line-height: 2.5em
       height: 2.3em
       text-align: center
@@ -489,15 +498,13 @@ code
     padding-bottom: 1em
     z-index: 10
     border-radius: 3px
-    -webkit-border-radius: 3px
-    -moz-border-radius: 3px
-    -o-border-radius: 3px
     margin: -13px -10px 0
     h3
       background: #294d6e
       line-height: 2.2em
   .details
     padding: 0
+    height: 380px
     .pricing
       background: #f7f8f9
       border-bottom: solid 1px #e3e3e3
@@ -556,21 +563,67 @@ code
         margin-right: 5px
       span
         font-size: 16px
-        color: #666
+        color: #222
+  .free
+    margin: 30px auto
+    text-align: center
+  .buttons
+    text-align: center
+    padding: 1em 0
+    .button 
+      span
+        height: 30px
+        line-height: 30px
+        padding: 0 1.5em
+    .info
+      color: #7e848e
+      display: block
+      font-size: 0.85em
+      padding-top: 0.3em
 
-#plans .buttons
-  text-align: center
-  padding: 1em 0
+.features
+  span
+    background: #fff;
+    display: inline-block;
+    padding: 0 .5em;
+    z-index: 10;
+  h2
+    font-size: 1.25em;
+    font-weight: normal;
+    color: #7e848e;
+    position: relative;
+  h2::before
+    background: #ebebeb;
+    content: '';
+    position: absolute;
+    display: block;
+    height: 1px;
+    width: 100%;
+    top: .55em;
+    z-index: -1;
 
-#plans .buttons .button span
-  height: 30px
-  line-height: 30px
-  padding: 0 1.5em
-
-#plans .buttons .info
-  color: #7e848e
-  display: block
-  font-size: 0.85em
-  padding-top: 0.3em
-
+.questions-container
+  border-top: 1px solid #ebeff6;
+  background-color: #f7faff;
+  color: #7e848e;
+  padding-bottom: 100px;
+  min-height: 520px;
+  .questions
+    max-width: 968px;
+    margin: 0 auto;
+    padding: 40px;
+    .question_column
+      padding 0 50px
+      width 384px
+      float left
+      .question
+        font-size: 16px;
+        line-height: 26px;
+        color: #8a92a5;
+        font-weight: 400;
+        h4
+          color: #70798f;
+          font-weight: 600;
+          font-size: 17px;
+          padding: 45px 0 6px 0;
 

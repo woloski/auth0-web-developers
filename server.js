@@ -28,6 +28,11 @@ app.configure(function(){
     }
   }));
 
+  this.use(function(req, res, next) {
+    res.locals.debug = process.env.NODE_ENV !== "production";
+    next();
+  });
+
   this.use(express.static(__dirname + '/public'));
 });
 
