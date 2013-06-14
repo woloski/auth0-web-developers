@@ -625,7 +625,7 @@ code {
   text-shadow: 0 1px 1px #1d2125;
 }
 #plans strong {
-  font-weight: 500;
+  font-weight: 600;
 }
 #plans .planItem {
   background: #fbfbfc;
@@ -733,7 +733,7 @@ code {
   margin-right: 5px;
 }
 #plans .details .dItem span {
-  font-size: 16px;
+  font-size: 15px;
   color: #222;
 }
 #plans .free {
