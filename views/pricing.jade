@@ -1,13 +1,11 @@
 extends layout
 
 block styles
-  link(rel='stylesheet', type='text/css', href='/components/tooltipster/css/tooltipster.css')
 
 block content
   .tagline
     .tagline-container.overlap
-      h2 Start for free.
-      h3 No obligation, no credit card required.
+      h2 First class, affordable, identity management
 
   .middle
     .main
@@ -26,26 +24,21 @@ block content
                     i.icon-ok-sign
                     strong 1.000
                     span Users
-                    i.help.icon-question-sign.tooltip(title='Users who have logged in at least once to your app.')
                   li.dItem
                     i.icon-ok-sign
-                    strong 6
-                    span Mobile / Web Apps
+                    strong 4
+                    span Enterprise Connections
                   li.dItem
                     i.icon-ok-sign
                     strong 4
                     span Social Providers
-                    i.help.icon-question-sign.tooltip(title='Social providers available are: Gmail, Microsoft Account, Facebook, Twitter, Github, LinkedIn, PayPal, vKontakte, and more to come.')
                   li.dItem
                     i.icon-ok-sign
-                    strong 2
-                    span Enterprise Providers
-                    i.help.icon-question-sign.tooltip(title='Enterprise providers available are: Windows Azure AD, Google Apps, ADFS, Active Directory and SAMLP')
+                    strong 4
+                    span Mobile / Web Apps
                   li.dItem
                     i.icon-ok-sign
-                    span Web / Chat support
-                .buttons
-                  button.sign-up-btn.btn.small(type='button') Sign Up
+                    span Web / Chat Support
               li.planItem.featured
                 h3 Pro
                 ul.details
@@ -57,23 +50,24 @@ block content
                     i.icon-ok-sign
                     strong 10.000
                     span Users
+                    i.help.icon-question-sign.tooltip(title='Users who have logged in at least once to your apps.')
+                  li.dItem
+                    i.icon-ok-sign
+                    strong ∞
+                    span Enterprise Connections
+                    i.help.icon-question-sign.tooltip(title='Enterprise providers available are: Windows Azure AD, Google Apps, ADFS, Active Directory and SAMLP')
+                  li.dItem
+                    i.icon-ok-sign
+                    strong ∞
+                    span Social Providers
+                    i.help.icon-question-sign.tooltip(title='Social providers available are: Gmail, Microsoft Account, Facebook, Twitter, Github, LinkedIn, PayPal, vKontakte, and more to come.')
                   li.dItem
                     i.icon-ok-sign
                     strong ∞
                     span Mobile / Web Apps
                   li.dItem
                     i.icon-ok-sign
-                    strong ∞
-                    span Social Providers
-                  li.dItem
-                    i.icon-ok-sign
-                    strong ∞
-                    span Enterprise Providers
-                  li.dItem
-                    i.icon-ok-sign
-                    span Web / Chat support
-                .buttons
-                  button.sign-up-btn.btn.small(type='button') Sign Up
+                    span Priority Support
               li.planItem.plus
                 h3 Unlimited
                 ul.details
@@ -88,7 +82,7 @@ block content
                   li.dItem
                     i.icon-ok-sign
                     strong ∞
-                    span Mobile / Web Apps
+                    span Enterprise Connections
                   li.dItem
                     i.icon-ok-sign
                     strong ∞
@@ -96,15 +90,11 @@ block content
                   li.dItem
                     i.icon-ok-sign
                     strong ∞
-                    span Enterprise Providers
+                    span Mobile / Web Apps
                   li.dItem
                     i.icon-ok-sign
-                    span Phone support
-                .buttons
-                  button.sign-up-btn.btn.small(type='button') Sign Up
+                    span Dedicated Support
             .free Or 
-              button.sign-up-btn.btn.x-small(type='button') sign up
-              | for 
               strong FREE 
               | for up to 
               strong 100 
@@ -115,50 +105,53 @@ block content
               | social providers and 
               strong 1 
               | enterprise provider
+            button.zocial.primary.button.big.sign-up-btn Start using Auth0
+            .free Bigger plans? Host Auth0 in your own cloud? 
+              a(href="mailto:sales@auth0.com") Contact us
 
 
-  .questions-container
-    .questions
-      h2 Some common questions our customers ask
-      .question_column
-        .question
-          h4 What counts as a profile?
-          .answer
-            | A profile is associated with a
-            | person that has signed up for your application
-            | and someone you would tie data to within
-            | Mixpanel. Generally, this is not a user who
-            | would be a guest to your application, or who
-            | hasn't signed up.
-        .question
-          h4 Is this an additional charge or is it included somehow?
-          .answer
-            | People plans are an additional
-            | charge every month. If you bought a Startup
-            | plan under Engagement plans and the +50K
-            | People plan, your monthly bill will be $300 a
-            | month.
-         .question_column 
-      .question_column
-        .question
-          h4 What if I go over my profile quota?
-          .answer
-            | Exceeding your people plan will
-            | result in either a prorated overage charge based
-            | on your plan's current cost per user, or an
-            | automatic plan upgrade.  We will always choose the
-            | cheaper option.
-        .question
-          h4 Can I send my customers unlimited email and push notifications?
-          .answer
-            | Yes. Mixpanel has a feature
-            | called
-            a(href='/notifications/') Notifications
-            | which allows you to send
-            | emails or push notifications automatically. If you
-            | have a People plan, you can send as many emails or
-            | push notifications as you would like.
-      .clear
+  //- .questions-container
+  //-   .questions
+  //-     h2 Some common questions our customers ask
+  //-     .question_column
+  //-       .question
+  //-         h4 What counts as a profile?
+  //-         .answer
+  //-           | A profile is associated with a
+  //-           | person that has signed up for your application
+  //-           | and someone you would tie data to within
+  //-           | Mixpanel. Generally, this is not a user who
+  //-           | would be a guest to your application, or who
+  //-           | hasn't signed up.
+  //-       .question
+  //-         h4 Is this an additional charge or is it included somehow?
+  //-         .answer
+  //-           | People plans are an additional
+  //-           | charge every month. If you bought a Startup
+  //-           | plan under Engagement plans and the +50K
+  //-           | People plan, your monthly bill will be $300 a
+  //-           | month.
+  //-        .question_column 
+  //-     .question_column
+  //-       .question
+  //-         h4 What if I go over my profile quota?
+  //-         .answer
+  //-           | Exceeding your people plan will
+  //-           | result in either a prorated overage charge based
+  //-           | on your plan's current cost per user, or an
+  //-           | automatic plan upgrade.  We will always choose the
+  //-           | cheaper option.
+  //-       .question
+  //-         h4 Can I send my customers unlimited email and push notifications?
+  //-         .answer
+  //-           | Yes. Mixpanel has a feature
+  //-           | called
+  //-           a(href='/notifications/') Notifications
+  //-           | which allows you to send
+  //-           | emails or push notifications automatically. If you
+  //-           | have a People plan, you can send as many emails or
+  //-           | push notifications as you would like.
+  //-     .clear
 
 
 block scripts

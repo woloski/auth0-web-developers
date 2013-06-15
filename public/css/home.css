@@ -9,6 +9,117 @@ body *zoom:1:after {
 body *zoom:1:after {
   clear: both;
 }
+.zocial,
+a.zocial {
+  border: 1px solid #777;
+  border-color: rgba(0,0,0,0.2);
+  border-bottom-color: #333;
+  border-bottom-color: rgba(0,0,0,0.4);
+  color: #fff;
+  -moz-box-shadow: inset 0 0.08em 0 rgba(255,255,255,0.4), inset 0 0 0.1em rgba(255,255,255,0.9);
+  -webkit-box-shadow: inset 0 0.08em 0 rgba(255,255,255,0.4), inset 0 0 0.1em rgba(255,255,255,0.9);
+  -webkit-box-shadow: inset 0 0.08em 0 rgba(255,255,255,0.4), inset 0 0 0.1em rgba(255,255,255,0.9);
+  box-shadow: inset 0 0.08em 0 rgba(255,255,255,0.4), inset 0 0 0.1em rgba(255,255,255,0.9);
+  cursor: pointer;
+  display: inline-block;
+  font: bold 100%/2.1 "Lucida Grande", Tahoma, sans-serif;
+  padding: 0 0.95em 0 0;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+  white-space: nowrap;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  -moz-border-radius: 0.3em;
+  -webkit-border-radius: 0.3em;
+  -webkit-border-radius: 0.3em;
+  border-radius: 0.3em;
+}
+.zocial:before {
+  content: "";
+  border-right: 0.075em solid rgba(0,0,0,0.1);
+  float: left;
+  font: 120%/1.65 zocial;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0 0.5em 0 0;
+  padding: 0 0.5em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  -moz-box-shadow: 0.075em 0 0 rgba(255,255,255,0.25);
+  -webkit-box-shadow: 0.075em 0 0 rgba(255,255,255,0.25);
+  -webkit-box-shadow: 0.075em 0 0 rgba(255,255,255,0.25);
+  box-shadow: 0.075em 0 0 rgba(255,255,255,0.25);
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+.zocial:active {
+  outline: none;
+/* outline is visible on :focus */
+}
+.zocial.icon {
+  overflow: hidden;
+  max-width: 2.4em;
+  padding-left: 0;
+  padding-right: 0;
+  max-height: 2.15em;
+  white-space: nowrap;
+}
+.zocial.icon:before {
+  padding: 0;
+  width: 2em;
+  height: 2em;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+}
+.zocial {
+  background-image: -moz-linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.05) 49%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.1));
+  background-image: -ms-linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.05) 49%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.1));
+  background-image: -o-linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.05) 49%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.1));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.1)), color-stop(49%, rgba(255,255,255,0.05)), color-stop(51%, rgba(0,0,0,0.05)), to(rgba(0,0,0,0.1)));
+  background-image: -webkit-linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.05) 49%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.1));
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255,255,255,0.1)), color-stop(0.49, rgba(255,255,255,0.05)), color-stop(0.51, rgba(0,0,0,0.05)), color-stop(1, rgba(0,0,0,0.1)));
+  background-image: -webkit-linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 49%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.1) 100%);
+  background-image: -moz-linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 49%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.1) 100%);
+  background-image: -o-linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 49%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.1) 100%);
+  background-image: -ms-linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 49%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.1) 100%);
+  background-image: linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 49%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.1) 100%);
+}
+.zocial:hover,
+.zocial:focus {
+  background-image: -moz-linear-gradient(rgba(255,255,255,0.15) 49%, rgba(0,0,0,0.1) 51%, rgba(0,0,0,0.15));
+  background-image: -ms-linear-gradient(rgba(255,255,255,0.15) 49%, rgba(0,0,0,0.1) 51%, rgba(0,0,0,0.15));
+  background-image: -o-linear-gradient(rgba(255,255,255,0.15) 49%, rgba(0,0,0,0.1) 51%, rgba(0,0,0,0.15));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.15)), color-stop(49%, rgba(255,255,255,0.15)), color-stop(51%, rgba(0,0,0,0.1)), to(rgba(0,0,0,0.15)));
+  background-image: -webkit-linear-gradient(rgba(255,255,255,0.15) 49%, rgba(0,0,0,0.1) 51%, rgba(0,0,0,0.15));
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.49, rgba(255,255,255,0.15)), color-stop(0.51, rgba(0,0,0,0.1)), color-stop(1, rgba(0,0,0,0.15)));
+  background-image: -webkit-linear-gradient(top, rgba(255,255,255,0.15) 49%, rgba(0,0,0,0.1) 51%, rgba(0,0,0,0.15) 100%);
+  background-image: -moz-linear-gradient(top, rgba(255,255,255,0.15) 49%, rgba(0,0,0,0.1) 51%, rgba(0,0,0,0.15) 100%);
+  background-image: -o-linear-gradient(top, rgba(255,255,255,0.15) 49%, rgba(0,0,0,0.1) 51%, rgba(0,0,0,0.15) 100%);
+  background-image: -ms-linear-gradient(top, rgba(255,255,255,0.15) 49%, rgba(0,0,0,0.1) 51%, rgba(0,0,0,0.15) 100%);
+  background-image: linear-gradient(top, rgba(255,255,255,0.15) 49%, rgba(0,0,0,0.1) 51%, rgba(0,0,0,0.15) 100%);
+}
+.zocial:active {
+  background-image: -moz-linear-gradient(bottom, rgba(255,255,255,0.1), rgba(255,255,255,0) 30%, transparent 50%, rgba(0,0,0,0.1));
+  background-image: -ms-linear-gradient(bottom, rgba(255,255,255,0.1), rgba(255,255,255,0) 30%, transparent 50%, rgba(0,0,0,0.1));
+  background-image: -o-linear-gradient(bottom, rgba(255,255,255,0.1), rgba(255,255,255,0) 30%, transparent 50%, rgba(0,0,0,0.1));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.1)), color-stop(30%, rgba(255,255,255,0)), color-stop(50%, transparent), to(rgba(0,0,0,0.1)));
+  background-image: -webkit-linear-gradient(bottom, rgba(255,255,255,0.1), rgba(255,255,255,0) 30%, transparent 50%, rgba(0,0,0,0.1));
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(255,255,255,0.1)), color-stop(0.3, rgba(255,255,255,0)), color-stop(0.5, transparent), color-stop(1, rgba(0,0,0,0.1)));
+  background-image: -webkit-linear-gradient(bottom, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 30%, transparent 50%, rgba(0,0,0,0.1) 100%);
+  background-image: -moz-linear-gradient(bottom, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 30%, transparent 50%, rgba(0,0,0,0.1) 100%);
+  background-image: -o-linear-gradient(bottom, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 30%, transparent 50%, rgba(0,0,0,0.1) 100%);
+  background-image: -ms-linear-gradient(bottom, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 30%, transparent 50%, rgba(0,0,0,0.1) 100%);
+  background-image: linear-gradient(bottom, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 30%, transparent 50%, rgba(0,0,0,0.1) 100%);
+}
 a {
   background: transparent;
   font-size: 100%;
@@ -27,6 +138,25 @@ body {
   background-image: url("/img/cream_dust.png");
   font-family: 'Open Sans', 'HelveticaNeue';
   margin: 0;
+  -webkit-font-smoothing: auto;
+}
+button {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+.zocial.button {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  background-color: #2968a5;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin: 0 auto;
+  padding: 0;
+}
+.zocial.button.big {
+  padding: 8px 18px;
+  font-size: 16px;
+  width: 200px;
+  display: block;
 }
 .middle {
   margin-top: 50px;
@@ -164,7 +294,7 @@ body {
   margin-bottom: 40px;
 }
 .main .overlap {
-  margin-top: -330px;
+  margin-top: -290px;
 }
 .main #screenshots-pager {
   display: inline;
@@ -302,7 +432,7 @@ body {
   padding: 40px;
 }
 .tagline .overlap {
-  height: 400px;
+  height: 360px;
 }
 h2 {
   font-size: 2em;
@@ -318,50 +448,6 @@ h2 {
 .depth:after {
   top: 2px;
   left: 2px;
-}
-.btn {
-  display: inline-block;
-  cursor: pointer;
-  font-size: 17px;
-  color: #fff;
-  text-shadow: 1px 1px 0 #394555;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
-  text-decoration: none !important;
-  font-weight: bold;
-  -webkit-box-shadow: 1px 1px 1px 1px #133e66;
-  box-shadow: 1px 1px 1px 1px #133e66;
-  border: 0;
-  padding: 10px 28px;
-  width: 98%;
-  background-color: #3c71a1;
-}
-.btn.big {
-  height: 60px;
-  font-size: 20px;
-}
-.btn.small {
-  width: 140px;
-  font-size: 14px;
-}
-.btn.x-small {
-  width: 70px;
-  font-size: 13px;
-  padding: 5px;
-  margin: 5px;
-}
-.btn.mid {
-  width: 70px;
-  font-size: 14px;
-  padding: 5px;
-  margin-top: -3px;
-}
-.btn:hover {
-  color: #e2eefa;
-}
-.btn:active {
-  position: relative;
-  top: 1px;
 }
 .popup .overlay {
   position: fixed;
@@ -508,28 +594,6 @@ h2 {
   -ms-filter: none;
   filter: none;
 }
-.topbar {
-  position: fixed;
-  top: 0;
-  right: 2%;
-  float: left;
-}
-.topbar .btn {
-  margin: 5px;
-  height: 35px;
-  width: 35px;
-  padding: 0;
-  font-size: 22px;
-  padding-top: 4px;
-  padding-left: 15px;
-}
-.topbar .btn.label {
-  width: 80px;
-  font-weight: 500;
-}
-.topbar .btn.label i {
-  margin-right: 5px;
-}
 .carousel a {
   color: #fff;
 }
@@ -624,6 +688,9 @@ code {
   border-top-color: #212529;
   text-shadow: 0 1px 1px #1d2125;
 }
+#plans ul {
+  margin-left: 25px;
+}
 #plans strong {
   font-weight: 600;
 }
@@ -635,7 +702,7 @@ code {
   overflow: hidden;
   position: relative;
   text-align: left;
-  width: 305px;
+  width: 312px;
   z-index: 5;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -645,8 +712,8 @@ code {
 #plans .planItem h3 {
   background: rgba(51,71,105,0.56);
   color: #fff;
-  font-size: 1.1em;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 400;
   line-height: 2.5em;
   height: 2.3em;
   text-align: center;
@@ -667,7 +734,8 @@ code {
 }
 #plans .details {
   padding: 0;
-  height: 380px;
+  margin: 0;
+  height: 360px;
 }
 #plans .details .pricing {
   background: #f7f8f9;
@@ -692,14 +760,6 @@ code {
   line-height: 1.2em;
   text-transform: uppercase;
 }
-#plans .details .pricing .signup .button span {
-  font-size: 1em;
-  font-weight: 700;
-  line-height: 2.7em;
-  min-width: 7.54em;
-  max-width: 8.85em;
-  padding: 0;
-}
 #plans .details .pricing .signup .signupInfo {
   color: #7e848e;
   display: block;
@@ -714,26 +774,32 @@ code {
   text-align: left;
   position: relative;
   margin: 20px 60px;
+  margin-right: 50px;
 }
 #plans .details .dItem i {
   position: absolute;
   color: #294d6e;
   left: -30px;
   top: 2px;
+  font-size: 16px;
 }
 #plans .details .dItem .help {
   position: relative;
   top: 0;
   left: 0;
-  margin-left: 4px;
   color: #7f858f;
+  opacity: 100;
+  filter: alpha(opacity=10000);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10000)";
+  font-size: 13px;
 }
 #plans .details .dItem strong {
   font-weight: 600;
   margin-right: 5px;
 }
 #plans .details .dItem span {
-  font-size: 15px;
+  font-size: 14px;
+  font-weight: 300;
   color: #222;
 }
 #plans .free {
@@ -805,4 +871,50 @@ code {
   font-weight: 600;
   font-size: 17px;
   padding: 45px 0 6px 0;
+}
+#footer {
+  padding: 20px 0;
+  background: none repeat scroll 0 0 #f1f1f1;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  color: #17405e;
+}
+#footer h3 {
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 300;
+  color: #308ccf;
+}
+#footer ul {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+#footer li {
+  padding: 0 0 5px;
+}
+#footer a {
+  font-size: 14px;
+  color: #17405e;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+#footer a:hover {
+  padding-left: 5px;
+  text-decoration: underline;
+  color: #333;
+}
+#copywrite p {
+  padding: 10px 0;
+  margin: 0;
+}
+#totop {
+  cursor: pointer;
 }

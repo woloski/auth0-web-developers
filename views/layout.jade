@@ -6,9 +6,11 @@ head
     meta(charset='UTF-8')
   block head
   link(rel="shortcut icon", href="/img/logo-small.png")
-  link(rel='stylesheet', type='text/css', href='//fonts.googleapis.com/css?family=Open\+Sans:300,600,800')
+  link(rel='stylesheet', type='text/css', href='//fonts.googleapis.com/css?family=Open\+Sans:300,400,600,800')
+  link(rel='stylesheet', type='text/css', href='/components/tooltipster/css/tooltipster.css')
+  link(rel='stylesheet', type='text/css', href='http://auth0.com/css/bootstrap.min.css')
+  link(rel='stylesheet', type='text/css', href='http://auth0.com/css/bootstrap-responsive.min.css')
   link(rel='stylesheet', type='text/css', href='/components/Font-Awesome/css/font-awesome.min.css')
-  link(rel='stylesheet', type='text/css', href='css/bootstrap.min.css')
   link(rel='stylesheet', type='text/css', href='css/home.css')
   link(rel='stylesheet', type='text/css', href='/components/bootstrap/docs/assets/js/google-code-prettify/prettify.css')
   block styles
@@ -27,24 +29,60 @@ body
         li
           a(href='http://blog.auth0.com', target='_new') Blog
         li
-          button.sign-up-btn.btn.mid(type='button') Sign In
+          button.zocial.primary.button.sign-up-btn Sign Up
 
   block content
-  .middle
-    .main
-      .footer
-        ul
-          li 
-            a(title='Follow us on github', href='http://github.com/auth0', target='_blank')
-              i.icon-github
-          li
-            a(title='Follow us on twitter', href='http://twitter.com/authzero', target='_blank')
-              i.icon-twitter
-          li 
-            a(href='mailto:support@auth0.com') Contact Us
-          li 
-            a(href='#') Terms of Use
-          li &copy; Auth10 LLC
+  
+  #footer
+    .container
+        .row
+          .span3
+            h3 Quick Links
+            ul
+              li
+                a(href='/') Home
+              li
+                a(href='/features') Features
+              li
+                a(href='http://developers.auth0.com') Developers
+              li
+                a(href='https://docs.auth0.com') Docs
+          .span3
+            h3 Company
+            ul
+              li
+                a(href='http://blog.auth0.com') Blog
+              li
+                a(href='/about') About Us
+              li
+                a(href='/tos') Terms of Use
+          .span3
+            h3 Connect with us
+            ul
+              li
+                a(href='mailto:support@auth0.com', target='_blank') Write us
+              li
+                a(href='http://www.linkedin.com/company/auth0', target='_blank') LinkedIn
+              li
+                a(href='http://twitter.com/authzero', target='_blank') Twitter
+              li
+                a(href='http://chat.auth0.com', target='_blank') Chat with us
+          .span3
+            h3 Subscribe
+            p Subscribe to our newsletter and stay up to date with the latest news and deals!
+            form#subscribe-newsletter
+              input#subscribe-email.span3(type='text', placeholder='Your Email', name='subscribe')
+              input.btn.btn-primary(type='submit', value='Subscribe')
+    #copywrite
+      .container
+        .row
+          .span12
+            p
+              | © 2013 Auth0
+              span#totop.pull-right
+                | Back to Top
+                i.icon-arrow-up
+
 
   block scripts
 
