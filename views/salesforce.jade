@@ -6,13 +6,11 @@ block meta
   meta(name='description',content='Single Sign On Salesforce with SAML, Google Apps, Office 365, Active Directory, LDAP, Gmail, Twitter, Facebook, LinkedIn')
   meta(charset='UTF-8')
 
-block tagline
+block content
   .tagline
     .tagline-container
       h2 Single Sign On for Salesforce
       h3 Connect to Salesforce with your corporate credentials. Use Active Directory, Office365, Google Apps or LDAP for Single Sign On with Salesforce in minutes.
-
-block content
   .middle
     .main
       
@@ -39,32 +37,9 @@ block content
         a.two(href="#", data-to="two")
           i.icon-circle-blank
 
-      .button-bar
-        button#sign-up-btn.btn.big(type='button') 
-          | Request Invite
-
-  .popup
-    .overlay(style="display: none;")
-      #sign-up.panel
-        header
-          h1 Sign Up
-          a.close(style='display: block;') Close
-        .list
-          form#sign-up-form(style='display: block;')
-            .email
-              label(for='email') We will let you know as soon as we go live!
-              input#email(name='email', type='email', value='', placeholder='your email', required)
-              p.error  
-            button.btn(type='submit', style="width: 150px;")
-              i.icon-envelope 
-              |&nbsp;Sign Up
-      #sign-up-done.panel
-        header
-          h1 Done!
-          a.close(style='display: block;') Close
-        .list
-          p Thank you very much for your interest!
-          p We will let you know as soon as we go live.
+      #start
+        .start Start accepting all identies instantly
+          button.zocial.primary.button.mid.sign-up-btn Get Started
 
 block scripts
   script(src='https://sdk.auth0.com/auth0.js#client=zEYfpoFzUMEzilhkHilcWoNkrFfJ3hAI&amp;redirect_uri=https://app.auth0.com/callback')

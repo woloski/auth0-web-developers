@@ -6,13 +6,12 @@ block meta
   meta(name='description',content='Single Sign On Dropbox with SAML, Google Apps, Office 365, Active Directory, LDAP, Gmail, Twitter, Facebook, LinkedIn')
   meta(charset='UTF-8')
 
-block tagline
+block content
   .tagline
     .tagline-container
       h2 Single Sign On for Dropbox
       h3 Connect to Dropbox with your corporate credentials. Use Active Directory, Office365, Google Apps or LDAP for Single Sign On with Dropbox in minutes.
 
-block content
   .middle
     .main
       
@@ -25,23 +24,14 @@ block content
               h3 Configure Dropbox for SSO.
               p Enabling Dropbox SSO with Auth0 is just one checkbox away. 
               p Enter the login URL and certificate on Dropbox and you are done.  
-          .item(data-explain='two')
-            p
-              img(src='img/db-sso.png', alt='Dropbox SSO')
-            article
-              h3 Single Sign On. 
-              p Login with Active Directory, Office365, Google Apps, LDAP, SQL or your custom authentication. 
-              p Login with any Social Identity: Github, LinkedIn, Gmail, Twitter, PayPal, LiveId.
  
-      #screenshots-pager
-        a.one.pager-active(href="#", data-to="one")
-          i.icon-circle
-        a.two(href="#", data-to="two")
-          i.icon-circle-blank
-
-      .button-bar
-        button#sign-up-btn.btn.big(type='button') 
-          | Request Invite
+      //- #screenshots-pager
+      //-   a.one.pager-active(href="#", data-to="one")
+      //-     i.icon-circle
+        
+      #start
+        .start Start accepting all identies instantly
+          button.zocial.primary.button.mid.sign-up-btn Get Started
 
   .popup
     .overlay(style="display: none;")
