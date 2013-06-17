@@ -6,55 +6,40 @@ block meta
 block content
   .tagline
     .tagline-container
-      h2 Open your web and mobile apps to enterprises
-      h3 Connect your app with Active Directory, Office365, Google Apps for Single Sign On. Query users from any directory with a simple, unified API. Keep an audit trail of logins.
+      h2 Single Sign On with social and enterprise identities one click away
+      h3 Implement a robust identity strategy from zero ground allowing to connect your apps and APIs with multiple authentication sources
 
   .middle
     .main
       
       #screenshots.carousel.slide
         .carousel-inner
-          .item(data-explain='one')
-            p
-              img(src='img/provisioning-step1.png', alt='Connect your app with enterprise authentication systems, using the Provisioning Widget')
-            article
-              h3 Remove the #1 obstacle for Enterprises to use cloud software: identity integration and Single Sign On
-              p Let your customers' use their existing authentication infrastructure, with a simple, non-invasive JavaScript-based widget that works with most common enterprise authentication protocols. 
-              p Use our simple API for additional flexibility and control of the provisioning process.
-          .item(data-explain='two')
-            p
-              img(src='img/provisioning-step2.png', alt='Choose from different authentication types')
-            article
-              h3 Connect your web or mobile app with your customer's users directory
-              p On-board customers using Google Apps, Office365 and Active Directory in minutes. 
-              p Let Auth0 remove all the pain. Get your app securely federated in minutes.
-          .item.active(data-explain='three')
+          .item.active(data-explain='one')
             p
               img(src='img/login-mobile.png', alt='Allow users to sign in with their work credentials or with with their social identity')
             article
               h3 Single Sign On for Enterprise and Social Identities
               p Use the Login Widget to quickly integrate SSO into your app, or trigger the login programatically using the protocol. 
               p Use the included quickstarts and samples on all popular platforms to get you started quickly: ASP.NET MVC, Windows 8 RT, iOS, Android, Node.js and more.
-          .item(data-explain='four')
+          .item(data-explain='two')
             p
               img(src='img/querygraph.png', alt='Query the Enterprise Graph')
             article
               h3 Query the Enterprise Graph
               p Query our unified User Profile API to create meaningful experiences for your enterprise customers.
               p Support for Google Apps and Office365 with a simple consent from the domain administrator.
-          .item(data-explain='five')
+          .item(data-explain='three')
             p
               img(src='img/users.png', alt='Keep control of everything with the Auth0 Dashboard')
             article
               h3 Auditing and Analytics
               p See who has logged in, how many times and when through the Auth0 web Dashboard. 
-              p Use our API to customize the your app.
-              p Add, remove, enable/disable connections and troubleshoot errors through the UI or with the API.
+              p Comming soon: support tools like login history and user impersonation. 
 
-          .item(data-explain='six')
-            .twocols
-              h3 Mobile, Native and Web apps integration
-              p Use our widgets and SDK to get your app up and running in minutes, on the most popular platforms (e.g. iOS, Windows 8, ASP.NET, node.js). Use the REST API for a more customized experience.
+          .item(data-explain='four')
+            .twocols.sdk
+              h3 SDK for Everything
+              //- p Use our widgets and SDK to get your app up and running in minutes, on the most popular platforms (e.g. iOS, Windows 8, ASP.NET, node.js). Use the REST API for a more customized experience.
               article
                 .snippet
                   p iOS
@@ -81,22 +66,34 @@ block content
                   pre.prettyprint.language-bsh
                     code
                       | https://yourapp.auth0.com/authorize?response_type=code&connection=...connection-name...</strong>&client_id=...your-id...&scope=openid
-                
-
+          .item(data-explain='five')
+            p
+              img(src='img/provisioning-step1.png', alt='Connect your app with enterprise authentication systems, using the Provisioning Widget')
+            article
+              h3 Remove the #1 obstacle for Enterprises to use cloud software: identity integration and Single Sign On
+              p Let your customers' use their existing authentication infrastructure, with a simple, non-invasive JavaScript-based widget that works with most common enterprise authentication protocols. 
+              p Use our simple API for additional flexibility and control of the provisioning process.
+          .item(data-explain='six')
+            p
+              img(src='img/provisioning-step2.png', alt='Choose from different authentication types')
+            article
+              h3 Connect your web or mobile app with your customer's users directory
+              p On-board customers using Google Apps, Office365 and Active Directory in minutes. 
+              p Let Auth0 remove all the pain. Get your app securely federated in minutes.
+          
       #screenshots-pager
-        a.one(href="#")
-          i.icon-circle-blank
+        a.one.pager-active(href="#")
+          i.icon-circle
         a.two(href="#")
           i.icon-circle-blank
-        a.three.pager-active(href="#")
-          i.icon-circle
+        a.three(href="#")
+          i.icon-circle-blank
         a.four(href="#")
           i.icon-circle-blank
         a.five(href="#")
           i.icon-circle-blank
         a.six(href="#")
           i.icon-circle-blank
-
       #explain(style='display:none')
         .item-explain.active.one
           .snippet
@@ -149,7 +146,21 @@ block content
                 |   { name: "Jordan Raley", picture: "http://...", email: "jordan@company.com" } 
                 | ]
         .item-explain.five
-
+      #quotes
+        blockquote
+          img(src="/img/quote1.png")
+          | We are extremely happy with your service. Really a high quality enabler and time saver.
+          .author Niels Flensted-Jensen - grean.com
+        blockquote
+          img(src="/img/quote2.png")
+          | The customer service at @authzero is amazing. Seriously, you guys are my favorite company right now.
+          .author Robert McLaws (@robertmclaws) - AdvancedRei.com
+      #logos
+        .logos
+      #start
+        .start Start accepting all identies instantly
+          button.zocial.primary.button.mid.sign-up-btn Get Started
+        
 block scripts
   script(src='/components/jquery/jquery.min.js')
   script(src='/components/bootstrap/js/bootstrap-carousel.js')

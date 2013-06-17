@@ -1,7 +1,7 @@
 !!! 5
 head
   block title
-    title Auth0 | Get the enterprise to use your software
+    title Auth0 | Single Sign On with social and enterprise identities one click away
   block meta
     meta(charset='UTF-8')
   block head
@@ -21,6 +21,7 @@ body
       a(href='/')
         .logo
         h1.depth(title='Auth0') Auth0
+        span for Cloud Apps
       ul
         li
           a(href='https://docs.auth0.com', target='_new') Docs
@@ -28,8 +29,10 @@ body
           a(href='/pricing') Pricing
         li
           a(href='http://blog.auth0.com', target='_new') Blog
-        li
+        li.buttons
           button.zocial.primary.button.sign-up-btn Sign Up
+        li.buttons
+          button.zocial.primary.button.sign-in-btn Sign In
 
   block content
   
@@ -42,9 +45,7 @@ body
               li
                 a(href='/') Home
               li
-                a(href='/features') Features
-              li
-                a(href='http://developers.auth0.com') Developers
+                a(href='https://auth0.com') Auth0 for Enterprise
               li
                 a(href='https://docs.auth0.com') Docs
           .span3
@@ -53,9 +54,9 @@ body
               li
                 a(href='http://blog.auth0.com') Blog
               li
-                a(href='/about') About Us
+                a(href='https://auth0.com/about') About Us
               li
-                a(href='/tos') Terms of Use
+                a(href='https://auth0.com/tos') Terms of Use
           .span3
             h3 Connect with us
             ul
@@ -72,16 +73,13 @@ body
             p Subscribe to our newsletter and stay up to date with the latest news and deals!
             form#subscribe-newsletter
               input#subscribe-email.span3(type='text', placeholder='Your Email', name='subscribe')
-              input.btn.btn-primary(type='submit', value='Subscribe')
+              input.zocial.primary.button.sign-up-btn(type='submit', value='Subscribe')
     #copywrite
       .container
         .row
           .span12
             p
               | © 2013 Auth0
-              span#totop.pull-right
-                | Back to Top
-                i.icon-arrow-up
 
 
   block scripts
