@@ -19,3 +19,19 @@ $('.sign-in-btn').on('click', function (e) {
                         signInButtonText: 'Sign In',
                         strategyDomainInvalid: 'Your company {domain} has not been setup for Single Sign On. Please use Google or a Windows Live account to sign-in. You can setup Single Sign On with your organization directory through the Auth0 dashboard.' });
 });
+
+$('#subscribe-newsletter').on('submit', function(e){
+  e.preventDefault();
+  var email = $('#subscribe-email').val();
+  if( email === '' )
+    return;
+
+  $.ajax({
+    url: '/subscribe',
+    type: 'POST',
+    data: { email: email },
+    success: function () {
+      $('#subscribe-email').val('');
+    }
+  });
+});

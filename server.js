@@ -69,6 +69,13 @@ app.post('/mail', function (req, res) {
   });
 });
 
+app.post('/subscribe', function (req, res) {
+  var mailNotifier = require('./lib/mailNotifier');
+  mailNotifier.notifySubscription(req.body.email, function(err){
+    res.send(200);
+  }); 
+});
+
 http.createServer(app).listen(port, function () {
   console.log('listening on http://localhost:' + port);
 });
