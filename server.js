@@ -40,24 +40,8 @@ app.get('/', function (req, res) {
   res.render('index');
 });
 
-app.get('/pricing', function (req, res) {
-  res.render('pricing');
-});
-
-app.get('/rms', function (req, res) {
-  res.render('rms');
-});
-
-app.get('/sharepoint', function (req, res) {
-  res.render('sharepoint');
-});
-
-app.get('/dropbox', function (req, res) {
-  res.render('dropbox');
-});
-
-app.get('/salesforce', function (req, res) {
-  res.render('salesforce');
+app.get('/:page', function(req, res) {
+  res.render(req.params.page);
 });
 
 app.post('/mail', function (req, res) {

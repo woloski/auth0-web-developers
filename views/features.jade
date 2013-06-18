@@ -1,0 +1,88 @@
+extends layout
+
+block styles
+
+block content
+  .tagline
+    .tagline-container
+      h2 Explore Auth0...
+
+  #features.content
+    .container
+      .row
+        .span4
+          h2.sub SDK for all
+          .img-circle
+            a.thumbnail
+              img(src="/img/apps.png")
+          p
+            | We support mobile, web and APIs on different platforms and languages. All of our SDKs are on 
+            a(href="https://github.com/auth0", target="_new") GitHub
+            |  and we are adding more based on demand.
+        .span4
+          h2.sub 1 API for all Social Providers
+          .img-circle
+            a.thumbnail
+              img(src="/img/social.png")
+          p
+            | Integrate once and enjoy a growing list of social logins. With a couple of lines of JavaScript, you will get the 
+            a(href="https://docs.auth0.com/login-widget", target="_new") Login Widget
+            |  and forget about solving login.
+        .span4
+          h2.sub Self Service Enterprise SSO
+          .img-circle
+            a.thumbnail
+              img(src="/img/prov.png")
+          p
+            | Dealing with the SAML protocol, is not bread &amp; butter. Even worst when you have to deal with different implementations. We simplified all that behind a couple of lines of JavaScript and a REST API call. 
+      hr
+      .row
+        .span4
+          h2.sub Integrate your own Auth
+          .img-circle
+            a.thumbnail
+              img(src="/img/db.png")
+          p
+            | By writing a bit of node.js you can authenticate your own users. This way you will have a unified interface, logging and auditing and management tools regardless of where the user comes from.
+        .span4
+          h2.sub User Management
+          .img-circle
+            a.thumbnail
+              img(src="/img/impersonate.png")
+          p
+            | "Login as" a user of your app for easy troubleshooting and support. Answer questions like: when was the last time this user logged in? Who is slipping away? And more analytics coming in the future.
+        .span4
+          h2.sub Recent Logins Stream
+          .img-circle
+            a.thumbnail
+              img(src="/img/recentlogins.png")
+          p
+            | See who is using your app now.
+      hr
+      .row
+        .span4
+          h2.sub Query Social APIs
+          .img-circle
+            a.thumbnail
+              img(src="/img/attributes.png")
+          p
+            | Specify what permissions you want from a social provider. Auth0 will give you back an access token that can be used to query the social API.
+        .span4
+          h2.sub Query Enterprise Directories
+          .img-circle
+            a.thumbnail
+              img(src="/img/usersapi.png")
+          p
+            | Query or sync a directory of users with the same unified API (available for Google Apps and Windows Azure AD)
+        .span4
+          h2.sub REST APIs
+          .img-circle
+            a.thumbnail
+              img(src="/img/apiexplorer.png")
+          p
+            | We expose everything as a rest API. Users, Apps, Connections.      
+
+block scripts
+  script(src='https://sdk.auth0.com/auth0.js#client=zEYfpoFzUMEzilhkHilcWoNkrFfJ3hAI&amp;redirect_uri=https://app.auth0.com/callback')
+  script(src='/components/jquery/jquery.min.js')
+
