@@ -319,12 +319,12 @@ button {
   text-decoration: none;
   margin: 3px;
 }
-.main #quotes {
+#quotes {
   display: inline-block;
   border-top: 1px solid #e2e2e2;
   padding: 50px;
 }
-.main #quotes blockquote {
+#quotes blockquote {
   display: inline;
   float: left;
   overflow: hidden;
@@ -340,12 +340,12 @@ button {
   padding: 20px;
   line-height: 30px;
 }
-.main #quotes blockquote .author {
+#quotes blockquote .author {
   font-weight: 300;
   font-size: 14px;
   margin-left: 10px;
 }
-.main #quotes blockquote img {
+#quotes blockquote img {
   display: inline;
   float: left;
   overflow: hidden;
@@ -358,19 +358,19 @@ button {
   left: -15px;
   top: 2px;
 }
-.main #logos {
+#logos {
   border-top: 1px solid #e2e2e2;
   padding: 30px;
 }
-.main #logos .logos {
+#logos .logos {
   height: 56px;
   background-repeat: no-repeat;
   background-image: url("/img/logos-bw.png");
 }
-.main #logos .logos.color {
+#logos .logos.color {
   background-image: url("/img/logos-color.png");
 }
-.main #start {
+#start {
   border-top: 1px solid #e2e2e2;
   padding: 40px;
   text-align: center;
