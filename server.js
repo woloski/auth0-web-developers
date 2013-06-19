@@ -28,6 +28,11 @@ app.configure(function(){
     }
   }));
 
+  this.use(function(req, res, next) {
+    res.locals.debug = process.env.NODE_ENV !== "production";
+    next();
+  });
+
   this.use(express.static(__dirname + '/public'));
 });
 
@@ -35,8 +40,8 @@ app.get('/', function (req, res) {
   res.render('index');
 });
 
-app.get('/pricing', function (req, res) {
-  res.render('pricing');
+app.get('/:page', function(req, res) {
+  res.render(req.params.page);
 });
 
 app.post('/mail', function (req, res) {
@@ -46,6 +51,13 @@ app.post('/mail', function (req, res) {
   mails.save(req.body.email, function () {
     res.send(200);
   });
+});
+
+app.post('/subscribe', function (req, res) {
+  var mailNotifier = require('./lib/mailNotifier');
+  mailNotifier.notifySubscription(req.body.email, function(err){
+    res.send(200);
+  }); 
 });
 
 http.createServer(app).listen(port, function () {
