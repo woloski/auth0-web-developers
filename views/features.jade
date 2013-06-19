@@ -1,0 +1,109 @@
+extends layout
+
+block styles
+
+block content
+  .tagline
+    .tagline-container
+      h2 Explore Auth0...
+
+  #features.content
+    .container
+      .row
+        .span4
+          h2.sub SDK for everyone
+          .img-circle
+            a.thumbnail
+              img(src="/img/apps.png")
+          p
+            | We support mobile, web and APIs on all popular platforms and languages. All of our SDKs are available on  
+            a(href="https://github.com/auth0", target="_new") GitHub
+            | . Open sourced and updated often.
+        .span4
+          h2.sub 1 API for all Social Providers
+          .img-circle
+            a.thumbnail
+              img(src="/img/social.png")
+          p
+            | Integrate once and enjoy a growing list of social logins. With a couple lines of JavaScript, you will get the 
+            a(href="https://docs.auth0.com/login-widget", target="_new") Login Widget
+            | . Stop wasting time reinventing the wheel.
+        .span4
+          h2.sub Self Service Enterprise SSO
+          .img-circle
+            a.thumbnail
+              img(src="/img/prov.png")
+          p
+            | Protocols like SAML and similar can be very complex to deal with. All implementations claim to be "standard", but seldom work together. We simplified all the setup behind a couple lines of JavaScript and a REST API call.
+      hr
+      .row
+        .span4
+          h2.sub Single Sign On
+          .img-circle
+            a.thumbnail
+              img(src="/img/sso.png")
+          p
+            | Get Single Sign On for all your mobile and web Apps and flow the user identity to your APIs for granular access control.
+        .span4
+          h2.sub Single Sign On on Devices
+          .img-circle
+            a.thumbnail
+              img(src="img/iphone.png")
+          p
+            | Same experience from web apps is taken to devices. We have 
+            a(href="https://docs.auth0.com", target="_new") native SDKs
+            |  for major platforms.
+        .span4
+          h2.sub User Management
+          .img-circle
+            a.thumbnail
+              img(src="/img/impersonate.png")
+          p
+            | Simplify troubleshooting with "Login as" any user. Cut support costs. Know who accesses what. When was the last time a user logged in into an app. Who is slipping away. More use analytics coming in the future.     
+      hr
+      .row
+        .span4
+          h2.sub Integrate your own Auth
+          .img-circle
+            a.thumbnail
+              img(src="/img/db.png")
+          p
+            | Plug in your own authentication. A few lines of node.js, and you can authenticate your users anywhere: SQL, custom databases, web services. You could have a unified interface, logging and auditing, and management tools independently of where the users come from.        
+        .span4
+          h2.sub Recent Logins Stream
+          .img-circle
+            a.thumbnail
+              img(src="/img/recentlogins.png")
+          p
+            | See who is using your app in real-time.
+        .span4
+          h2.sub Query Social APIs
+          .img-circle
+            a.thumbnail
+              img(src="/img/attributes.png")
+          p
+            | Define precisely what information and permissions you need your users to disclose. Avoid drop outs by asking too much. Auth0 will return an access token that can be used to query the social API with a very fine grained control.
+      hr
+      .row
+        .span4
+          h2.sub Query Enterprise Directories
+          .img-circle
+            a.thumbnail
+              img(src="/img/usersapi.png")
+          p
+            | Query or sync a directory of users with the same, simple to use, unified API (Available for Google Apps and Windows Azure AD).
+        .span4
+          h2.sub API for everything
+          .img-circle
+            a.thumbnail
+              img(src="/img/apiexplorer.png")
+          p
+            | Everything available through a simple to use REST API: Users, Apps, Connections, Logs. Extend. Expand. Unleash your creativity.     
+  #start
+    .start Start accepting all identies instantly
+      button.zocial.primary.button.mid.sign-up-btn Get Started
+
+block scripts
+  script(src='https://sdk.auth0.com/auth0.js#client=zEYfpoFzUMEzilhkHilcWoNkrFfJ3hAI&amp;redirect_uri=https://app.auth0.com/callback')
+  script(src='/components/jquery/jquery.min.js')
+

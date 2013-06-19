@@ -1,120 +1,167 @@
 extends layout
 
 block styles
-  link(rel='stylesheet', type='text/css', href='/components/tooltipster/css/tooltipster.css')
-
-block tagline
-  .tagline
-    .tagline-container 
-      h2 Start using it for free.
-      h3 No obligation, no credit card required.
 
 block content
+  .tagline
+    .tagline-container.overlap
+      h2 First class, affordable, identity platform
+
   .middle
     .main
-      ul#plans
-        li.planItem.personal
-          h3 Basic
-          ul.details
-            li.pricing
-              strong.monthly
-                | $10
-              span per month
-            li.dItem
-              i.icon-ok-sign
-              strong 100
-              span Enterprise Users
-              i.help.icon-question-sign.tooltip(title='Up to 100 users logging in with Office365, Google Apps, Active Directory and upcoming enterprise identities (SiteMinder, RSA, Salesforce, Yammer, Otka, OneLogin, Ping, etc.)')
-            li.dItem
-              i.icon-ok-sign
-              strong 1.000
-              span Social Users
-              i.help.icon-question-sign.tooltip(title='Up to 1.000 users logging in with a social account like Gmail or Microsoft Account and upcoming social identities (Facebook, Twitter, Github, LinkedIn, etc.)')
-            li.dItem
-              i.icon-ok-sign
-              strong ∞
-              span Apps
-            li.dItem
-              i.icon-ok-sign
-              span Auditing
-          .buttons
-            button#sign-up-btn.btn.small(type='button') Sign Up
-        li.planItem.featured
-          h3 Pro
-          ul.details
-            li.pricing
-              strong.monthly
-                | $79
-              span per month
-            li.dItem
-              i.icon-ok-sign
-              strong 1.000
-              span Enterprise Users
-            li.dItem
-              i.icon-ok-sign
-              strong 50.000
-              span Social Users
-            li.dItem
-              i.icon-ok-sign
-              strong ∞
-              span Apps
-            li.dItem
-              i.icon-ok-sign
-              span Auditing
-          .buttons
-            button#sign-up-btn.btn.small(type='button') Sign Up
-        li.planItem.plus
-          h3 Enterprise
-          ul.details
-            li.pricing
-              strong.monthly
-                | Call
-              span &nbsp;
-            li.dItem
-              i.icon-ok-sign
-              strong ∞
-              span Enterprise Users
-            li.dItem
-              i.icon-ok-sign
-              strong ∞
-              span Social Users
-            li.dItem
-              i.icon-ok-sign
-              strong ∞
-              span Apps
-            li.dItem
-              i.icon-ok-sign
-              span Auditing
-          .buttons
-            button#sign-up-btn.btn.small(type='button') Contact Us
-  
-  .popup
-    .overlay(style="display: none;")
-      #sign-up.panel
-        header
-          h1 Sign Up
-          a.close(style='display: block;') Close
-        .list
-          form#sign-up-form(style='display: block;')
-            .email
-              label(for='email') We will let you know as soon as we go live!
-              input#email(name='email', type='email', value='', placeholder='your email', required)
-              p.error  
-            button.btn(type='submit', style="width: 150px;")
-              i.icon-envelope 
-              |&nbsp;Sign Up
-      #sign-up-done.panel
-        header
-          h1 Done!
-          a.close(style='display: block;') Close
-        .list
-          p Thank you very much for your interest!
-          p We will let you know as soon as we go live.
+      .middle.overlap
+        .main
+          #plans
+            ul
+              li.planItem.personal
+                h3 Basic
+                ul.details
+                  li.pricing
+                    strong.monthly
+                      | $19
+                    span per month
+                  li.dItem
+                    i.icon-ok-sign
+                    strong 1.000
+                    span Users
+                  li.dItem
+                    i.icon-ok-sign
+                    strong 4
+                    span Enterprise Connections
+                  li.dItem
+                    i.icon-ok-sign
+                    strong 4
+                    span Social Providers
+                  li.dItem
+                    i.icon-ok-sign
+                    strong 4
+                    span Mobile / Web Apps
+                  li.dItem
+                    i.icon-ok-sign
+                    span Web / Chat Support
+              li.planItem.featured
+                h3 Standard
+                ul.details
+                  li.pricing
+                    strong.monthly
+                      | $49
+                    span per month
+                  li.dItem
+                    i.icon-ok-sign
+                    strong 10.000
+                    span Users
+                    i.help.icon-question-sign.tooltip(title='Users who have logged in at least once to your apps.')
+                  li.dItem
+                    i.icon-ok-sign
+                    strong ∞
+                    span Enterprise Connections
+                    i.help.icon-question-sign.tooltip(title='A connection is a trust relationship between yoru Auth0 account and your customer identity provider. Enterprise providers available are: Windows Azure AD, Google Apps, ADFS, Active Directory and SAML Protocol')
+                  li.dItem
+                    i.icon-ok-sign
+                    strong ∞
+                    span Social Providers
+                    i.help.icon-question-sign.tooltip(title='Social providers available are: Gmail, Microsoft Account, Facebook, Twitter, Github, LinkedIn, PayPal, vKontakte, and more to come.')
+                  li.dItem
+                    i.icon-ok-sign
+                    strong ∞
+                    span Mobile / Web Apps
+                  li.dItem
+                    i.icon-ok-sign
+                    span Priority Support
+              li.planItem.plus
+                h3 Pro
+                ul.details
+                  li.pricing
+                    strong.monthly
+                      | $99
+                    span per month
+                  li.dItem
+                    i.icon-ok-sign
+                    strong 50.000
+                    span Users
+                  li.dItem
+                    i.icon-ok-sign
+                    strong ∞
+                    span Enterprise Connections
+                  li.dItem
+                    i.icon-ok-sign
+                    strong ∞
+                    span Social Providers
+                  li.dItem
+                    i.icon-ok-sign
+                    strong ∞
+                    span Mobile / Web Apps
+                  li.dItem
+                    i.icon-ok-sign
+                    span Dedicated Support
+            .free Or 
+              strong FREE 
+              | for up to 
+              strong 100 
+              | users, 
+              strong 2 
+              | apps, 
+              strong 2 
+              | social providers and 
+              strong 1 
+              | enterprise connection
+            button.zocial.primary.button.big.sign-up-btn Start using Auth0
+            .free Bigger or Custom plans? Host Auth0 in your own cloud? 
+              a(href="mailto:sales@auth0.com") Contact us
+
+    #quotes
+      blockquote
+        img(src="/img/quote2.png")
+        | The customer service at @authzero is amazing. Seriously, you guys are my favorite company right now.
+        .author Robert McLaws (@robertmclaws) - AdvancedREI.com
+
+  //- .questions-container
+  //-   .questions
+  //-     h2 Some common questions our customers ask
+  //-     .question_column
+  //-       .question
+  //-         h4 What counts as a profile?
+  //-         .answer
+  //-           | A profile is associated with a
+  //-           | person that has signed up for your application
+  //-           | and someone you would tie data to within
+  //-           | Mixpanel. Generally, this is not a user who
+  //-           | would be a guest to your application, or who
+  //-           | hasn't signed up.
+  //-       .question
+  //-         h4 Is this an additional charge or is it included somehow?
+  //-         .answer
+  //-           | People plans are an additional
+  //-           | charge every month. If you bought a Startup
+  //-           | plan under Engagement plans and the +50K
+  //-           | People plan, your monthly bill will be $300 a
+  //-           | month.
+  //-        .question_column 
+  //-     .question_column
+  //-       .question
+  //-         h4 What if I go over my profile quota?
+  //-         .answer
+  //-           | Exceeding your people plan will
+  //-           | result in either a prorated overage charge based
+  //-           | on your plan's current cost per user, or an
+  //-           | automatic plan upgrade.  We will always choose the
+  //-           | cheaper option.
+  //-       .question
+  //-         h4 Can I send my customers unlimited email and push notifications?
+  //-         .answer
+  //-           | Yes. Mixpanel has a feature
+  //-           | called
+  //-           a(href='/notifications/') Notifications
+  //-           | which allows you to send
+  //-           | emails or push notifications automatically. If you
+  //-           | have a People plan, you can send as many emails or
+  //-           | push notifications as you would like.
+  //-     .clear
+
 
 block scripts
+  script(src='https://sdk.auth0.com/auth0.js#client=zEYfpoFzUMEzilhkHilcWoNkrFfJ3hAI&amp;redirect_uri=https://app.auth0.com/callback')
   script(src='/components/jquery/jquery.min.js')
-  script(src='/components/bootstrap/js/bootstrap-carousel.js')
   script(src='/components/tooltipster/js/jquery.tooltipster.min.js')
   script(src='/js/pricing.js')
-  script(src='/components/bootstrap/docs/assets/js/google-code-prettify/prettify.js')
 

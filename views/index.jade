@@ -1,12 +1,14 @@
 extends layout
 
-block tagline
+block meta
+    meta(name='description',content='Connect your app with Office365, Google Apps and Active Directory for Single Sign On. Query User Profiles with a simple, unified API. Know who uses your app and when')
+    meta(charset='UTF-8')
+block content
   .tagline
     .tagline-container
-      h2 Get the enterprise to use your software
-      h3 Connect your app with Office365, Google Apps and Active Directory for Single Sign On. Query User Profiles with a simple, unified API. Know who uses your app and when.
+      h2 Single Sign On for your Apps and APIs with social and enterprise identities
+      h3 Robust identity architecture, from day one.
 
-block content
   .middle
     .main
       
@@ -14,45 +16,30 @@ block content
         .carousel-inner
           .item.active(data-explain='one')
             p
-              img(src='img/provisioning-step1.png', alt='Connect your app with enterprise authentication systems, using the Provisioning Widget')
-            article
-              h3 Remove the #1 obstacle for Enterprises to use cloud software: identity integration and Single Sign On
-              p Let your customers' use their existing authentication infrastructure, with a simple, non-invasive JavaScript-based widget that works with most common enterprise authentication protocols. 
-              p Use our simple API for additional flexibility and control of the provisioning process.
-          .item(data-explain='two')
-            p
-              img(src='img/provisioning-step2.png', alt='Choose from different authentication types')
-            article
-              h3 Connect your web or mobile app with your customer's users directory
-              p On-board customers using Google Apps, Office365 and Active Directory in minutes. 
-              p Let Auth0 remove all the pain. Get your app securely federated in minutes.
-          .item(data-explain='three')
-            p
               img(src='img/login-mobile.png', alt='Allow users to sign in with their work credentials or with with their social identity')
             article
               h3 Single Sign On for Enterprise and Social Identities
               p Use the Login Widget to quickly integrate SSO into your app, or trigger the login programatically using the protocol. 
               p Use the included quickstarts and samples on all popular platforms to get you started quickly: ASP.NET MVC, Windows 8 RT, iOS, Android, Node.js and more.
-          .item(data-explain='four')
+          .item(data-explain='two')
             p
               img(src='img/querygraph.png', alt='Query the Enterprise Graph')
             article
               h3 Query the Enterprise Graph
               p Query our unified User Profile API to create meaningful experiences for your enterprise customers.
               p Support for Google Apps and Office365 with a simple consent from the domain administrator.
-          .item(data-explain='five')
+          .item(data-explain='three')
             p
               img(src='img/users.png', alt='Keep control of everything with the Auth0 Dashboard')
             article
               h3 Auditing and Analytics
               p See who has logged in, how many times and when through the Auth0 web Dashboard. 
-              p Use our API to customize the your app.
-              p Add, remove, enable/disable connections and troubleshoot errors through the UI or with the API.
+              p Comming soon: support tools like login history and user impersonation. 
 
-          .item(data-explain='six')
-            .twocols
-              h3 Mobile, Native and Web apps integration
-              p Use our widgets and SDK to get your app up and running in minutes, on the most popular platforms (e.g. iOS, Windows 8, ASP.NET, node.js). Use the REST API for a more customized experience.
+          .item(data-explain='four')
+            .twocols.sdk
+              h3 SDK for Everything
+              //- p Use our widgets and SDK to get your app up and running in minutes, on the most popular platforms (e.g. iOS, Windows 8, ASP.NET, node.js). Use the REST API for a more customized experience.
               article
                 .snippet
                   p iOS
@@ -79,22 +66,34 @@ block content
                   pre.prettyprint.language-bsh
                     code
                       | https://yourapp.auth0.com/authorize?response_type=code&connection=...connection-name...</strong>&client_id=...your-id...&scope=openid
-                
-
+          .item(data-explain='five')
+            p
+              img(src='img/provisioning-step1.png', alt='Connect your app with enterprise authentication systems, using the Provisioning Widget')
+            article
+              h3 Remove the #1 obstacle for Enterprises to use cloud software: identity integration and Single Sign On
+              p Let your customers' use their existing authentication infrastructure, with a simple, non-invasive JavaScript-based widget that works with most common enterprise authentication protocols. 
+              p Use our simple API for additional flexibility and control of the provisioning process.
+          .item(data-explain='six')
+            p
+              img(src='img/provisioning-step2.png', alt='Choose from different authentication types')
+            article
+              h3 Connect your web or mobile app with your customer's users directory
+              p On-board customers using Google Apps, Office365 and Active Directory in minutes. 
+              p Let Auth0 remove all the pain. Get your app securely federated in minutes.
+          
       #screenshots-pager
-        a.one.pager-active(href="#", data-to="one")
+        a.one.pager-active(href="#")
           i.icon-circle
-        a.two(href="#", data-to="two")
+        a.two(href="#")
           i.icon-circle-blank
-        a.three(href="#", data-to="three")
+        a.three(href="#")
           i.icon-circle-blank
-        a.four(href="#", data-to="four")
+        a.four(href="#")
           i.icon-circle-blank
-        a.five(href="#", data-to="five")
+        a.five(href="#")
           i.icon-circle-blank
-        a.six(href="#", data-to="five")
+        a.six(href="#")
           i.icon-circle-blank
-
       #explain(style='display:none')
         .item-explain.active.one
           .snippet
@@ -147,36 +146,18 @@ block content
                 |   { name: "Jordan Raley", picture: "http://...", email: "jordan@company.com" } 
                 | ]
         .item-explain.five
-
-      .button-bar
-        button#sign-up-btn.btn.big(type='button') 
-          | Request Invite
-
-  .popup
-    .overlay(style="display: none;")
-      #sign-up.panel
-        header
-          h1 Sign Up
-          a.close(style='display: block;') Close
-        .list
-          form#sign-up-form(style='display: block;')
-            .email
-              label(for='email') We will let you know as soon as we go live!
-              input#email(name='email', type='email', value='', placeholder='your email', required)
-              p.error  
-            button.btn(type='submit', style="width: 150px;")
-              i.icon-envelope 
-              |&nbsp;Sign Up
-      #sign-up-done.panel
-        header
-          h1 Done!
-          a.close(style='display: block;') Close
-        .list
-          p Thank you very much for your interest!
-          p We will let you know as soon as we go live.
-
+      #quotes
+        blockquote
+          img(src="/img/quote1.png")
+          | We are very happy with your service. Really a high quality enabler and time saver.
+          .author Niels Flensted-Jensen - grean.com
+      #logos
+        .logos
+      #start
+        .start Start accepting all identies instantly
+          button.zocial.primary.button.mid.sign-up-btn Get Started
+        
 block scripts
-  script(src='https://sdk.auth0.com/auth0.js#client=zEYfpoFzUMEzilhkHilcWoNkrFfJ3hAI&amp;redirect_uri=https://app.auth0.com/callback')
   script(src='/components/jquery/jquery.min.js')
   script(src='/components/bootstrap/js/bootstrap-carousel.js')
   script(src='/js/home.js')

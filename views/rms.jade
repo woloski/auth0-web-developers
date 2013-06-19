@@ -1,0 +1,59 @@
+extends layout
+
+head
+  block title
+    title Auth0 | Rights Management Services Federation
+  block meta
+    meta(name='description',content='Federate AD Rights Management Services with Google Apps, Office 365, Active Directory, LDAP, Gmail')
+    meta(charset='UTF-8')
+
+block content
+  .tagline
+    .tagline-container
+      h2 Open Active Directory Rights Management Services to Everyone
+      h3 Share protected content with users authenticated with Google Apps, Office 365, Active Directory, LiveId, Gmail or any other Identity Provider
+
+  .middle
+    .main
+      
+      #screenshots.carousel.slide
+        .carousel-inner
+          .item.active(data-explain='one')
+            p
+              img(src='img/auth0-rms-install.png', alt='Connect RMS with Auth0')
+            article
+              h3 Connect RMS with Auth0 with a single setting.
+              p Federate Rights Management Services with Auth0 in minutes. Just enter your Auth0 instance URL. 
+              p No deployment needed. No additional components required.
+          .item(data-explain='two')
+            p
+              img(src='img/auth0-rms-protect-doc.png', alt='Protect Word or Excel with federated RMS')
+            article
+              h3 Protect Word documents or Excel spreadsheets. 
+              p Share them with any of your partners authenticating with social or enterprise identity providers.
+              p Assign access rights to your documents across any organization.
+          .item(data-explain='three')
+            p
+              img(src='img/auth0-rms-open-protected-doc.png', alt='Allow users to sign in with their work credentials or with with their social identity and open protected documents')
+            article
+              h3 Open protected documents with your social or enterprise credentials
+              p Use Windows Rights Management and Auth0 Login Widget to authenticate and open protected content.
+ 
+      #screenshots-pager
+        a.one.pager-active(href="#", data-to="one")
+          i.icon-circle
+        a.two(href="#", data-to="two")
+          i.icon-circle-blank
+        a.three(href="#", data-to="three")
+          i.icon-circle-blank
+
+      #start
+        .start Start accepting all identies instantly
+          button.zocial.primary.button.mid.sign-up-btn Get Started
+
+block scripts
+  script(src='https://sdk.auth0.com/auth0.js#client=zEYfpoFzUMEzilhkHilcWoNkrFfJ3hAI&amp;redirect_uri=https://app.auth0.com/callback')
+  script(src='/components/jquery/jquery.min.js')
+  script(src='/components/bootstrap/js/bootstrap-carousel.js')
+  script(src='/js/home.js')
+  script(src='/components/bootstrap/docs/assets/js/google-code-prettify/prettify.js')
