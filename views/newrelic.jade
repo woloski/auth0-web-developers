@@ -1,0 +1,65 @@
+extends layout
+
+block title
+  title Auth0 | New Relic Pro
+block meta
+  meta(name='description',content='Single Sign On New Relic with SAML, Google Apps, Office 365, Active Directory, LDAP, Gmail, Twitter, Facebook, LinkedIn')
+  meta(charset='UTF-8')
+
+block content
+  .tagline
+    .tagline-container
+      h2 Single Sign On for New Relic Pro
+      h3 Connect to New Relic with your developer or corporate credentials. Use GitHub, Google, Facebook, Twitter, Active Directory, Office365, Google Apps or LDAP for Single Sign On with New Relic in minutes.
+
+  .middle
+    .main
+      
+      #screenshots.carousel.slide
+        .carousel-inner
+          .item.active(data-explain='one')
+            p
+              img(src='img/newrelic-setup.png', alt='Configure New Relic')
+            article
+              h3 Configure New Relic SSO in minutes.
+              p Enabling New Relic SSO with Auth0 is simple: just enter your New Relic Account.
+              p Enter your login URL in New Relic and your done!
+              p Login to New Relic with any supported identity system: GitHub, Google, Microsoft Account, Amazon, Facebook or your company account: Active Directory, LDAP, Google Apps or Office 365.    
+ 
+      //- #screenshots-pager
+      //-   a.one.pager-active(href="#", data-to="one")
+      //-     i.icon-circle
+        
+      #start
+        .start Start accepting all identies instantly
+          button.zocial.primary.button.mid.sign-up-btn Get Started
+
+  .popup
+    .overlay(style="display: none;")
+      #sign-up.panel
+        header
+          h1 Sign Up
+          a.close(style='display: block;') Close
+        .list
+          form#sign-up-form(style='display: block;')
+            .email
+              label(for='email') We will let you know as soon as we go live!
+              input#email(name='email', type='email', value='', placeholder='your email', required)
+              p.error  
+            button.btn(type='submit', style="width: 150px;")
+              i.icon-envelope 
+              |&nbsp;Sign Up
+      #sign-up-done.panel
+        header
+          h1 Done!
+          a.close(style='display: block;') Close
+        .list
+          p Thank you very much for your interest!
+          p We will let you know as soon as we go live.
+
+block scripts
+  script(src='https://sdk.auth0.com/auth0.js#client=zEYfpoFzUMEzilhkHilcWoNkrFfJ3hAI&amp;redirect_uri=https://app.auth0.com/callback')
+  script(src='/components/jquery/jquery.min.js')
+  script(src='/components/bootstrap/js/bootstrap-carousel.js')
+  script(src='/js/home.js')
+  script(src='/components/bootstrap/docs/assets/js/google-code-prettify/prettify.js')
