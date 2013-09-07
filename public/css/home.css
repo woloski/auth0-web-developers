@@ -210,8 +210,37 @@ button {
   *margin: 0 1.0416666666666665% -correction;
   margin-top: 0px;
   line-height: 2.5em;
-  color: #526863;
+  color: #474747;
   font-weight: 600;
+}
+.main .carousel .item .twocols2 .col1 {
+  display: inline;
+  float: left;
+  overflow: hidden;
+  width: 47.91666666666667%;
+  margin: 0 1.0416666666666665%;
+  *width: 47.91666666666667% -correction;
+  *margin: 0 1.0416666666666665% -correction;
+}
+.main .carousel .item .twocols2 .col1 span {
+  line-height: 1.5em;
+}
+.main .carousel .item .twocols2 .col2 {
+  text-align: right;
+  display: inline;
+  float: left;
+  overflow: hidden;
+  width: 47.91666666666667%;
+  margin: 0 1.0416666666666665%;
+  *width: 47.91666666666667% -correction;
+  *margin: 0 1.0416666666666665% -correction;
+}
+.main .carousel .item .twocols2 .col2 .login-button span {
+  cursor: default;
+  font-size: 20px;
+  width: 360px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .main .carousel .item p {
   display: inline;
@@ -226,8 +255,14 @@ button {
 .main .carousel .item p img {
   cursor: pointer;
 }
+.main .carousel .item h3 {
+  margin-top: 0px;
+  line-height: 1.3em;
+  color: #5e5e5e;
+  font-weight: 600;
+}
 .main .carousel .item article {
-  color: #73968e;
+  color: #5c5c5c;
   margin-bottom: 10px;
   display: inline;
   float: left;
@@ -241,7 +276,7 @@ button {
 .main .carousel .item article h3 {
   margin-top: 0px;
   line-height: 1.3em;
-  color: #526863;
+  color: #5e5e5e;
   font-weight: 600;
 }
 .main .carousel .item article p {
@@ -336,7 +371,7 @@ button {
   color: #3d4349;
   font-size: 22px;
   font-weight: 500;
-  color: #526863;
+  color: #5e5e5e;
   padding: 20px;
   line-height: 30px;
 }
@@ -388,7 +423,7 @@ button {
   text-transform: uppercase;
   font-size: 24px;
   font-weight: 300;
-  color: #73c68f;
+  color: #6e997d;
 }
 #footer ul {
   list-style: none outside none;
@@ -495,7 +530,7 @@ button {
 .tagline h3 {
   font-size: 1.5em;
   font-weight: 300;
-  color: #bad8c4;
+  color: #f7f7f7;
   margin: 0 auto;
   margin-top: 10px;
   text-align: center;

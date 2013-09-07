@@ -2,6 +2,13 @@ extends layout
 
 block title
   title Auth0 | New Relic Pro
+block styles
+  link(rel='stylesheet', type='text/css', href='https://sdk.auth0.com/sdk/css/zocial.css')
+  style(type='text/css')
+    .zocial.primary {
+      background-color: #138F7B;
+    }
+
 block meta
   meta(name='description',content='Single Sign On New Relic with SAML, Google Apps, Office 365, Active Directory, LDAP, Gmail, Twitter, Facebook, LinkedIn')
   meta(charset='UTF-8')
@@ -10,27 +17,41 @@ block content
   .tagline
     .tagline-container
       h2 Single Sign On for New Relic Pro
-      h3 Connect to New Relic with your developer or corporate credentials. Use GitHub, Google, Facebook, Twitter, Active Directory, Office365, Google Apps or LDAP for Single Sign On with New Relic in minutes.
+      h3 Connect to New Relic with your developer or corporate credentials.
 
   .middle
     .main
       
       #screenshots.carousel.slide
         .carousel-inner
-          .item.active(data-explain='one')
+          .item.active(data-explain='one',style="height: 400px;")
             p
-              img(src='img/newrelic-setup.png', alt='Configure New Relic')
-            article
-              h3 Configure New Relic SSO in minutes.
-              p Enabling New Relic SSO with Auth0 is simple: just enter your New Relic Account.
-              p Enter your login URL in New Relic and your done!
-              p Login to New Relic with any supported identity system: GitHub, Google, Microsoft Account, Amazon, Facebook or your company account: Active Directory, LDAP, Google Apps or Office 365. 
-              p New Relic integration in Auth0 is free in all editions.    
- 
-      //- #screenshots-pager
-      //-   a.one.pager-active(href="#", data-to="one")
-      //-     i.icon-circle
-        
+              video(id="pmMkm0Zh2o0", class="sublime", width="500", height="350", data-uid="pmMkm0Zh2o0", data-youtube-id="pmMkm0Zh2o0",preload="none",data-fullmode-priority='screen',data-youtube-suggested-quality='hd')
+            article(style="margin-top: 0")
+              h3(style="font-size: 40px") Great tools think alike.
+              span(style="padding-right: 10px")
+                img(src="http://newrelic.com/assets/partners/shared/new-relic-logo.png")
+              span
+                img(alt="Auth0",src="http://newrelic.com/assets/partners/page_logo/auth0.png")
+              p Login to New Relic with any supported identity system: GitHub, Google, AWS or your company account: Active Directory, LDAP, Google Apps or Windows Azure AD. 
+              button.zocial.primary.button.sign-up-btn(style="font-size:18px") Sign up Now
+
+      .carousel
+        .item(style="display:block;height:230px")
+          .twocols2
+            .col1(style="text-align:right")
+              h3 Welcome, New Relic Customers!
+              span Solve all your single sign on use cases with Auth0 and if you are a customer of New Relic you get Single Sign On for free to New Relic with any of these providers! 
+            .col2(style="text-align:center")
+              .login-button
+                span(class="zocial github") GitHub → NewRelic
+              .login-button
+                span(class="zocial amazon") AWS → NewRelic
+              .login-button
+                span(class="zocial googleplus") Google Apps → NewRelic
+              .login-button
+                span(class="zocial waad") Azure AD → NewRelic
+
       #start
         .start Start accepting all identies instantly
           button.zocial.primary.button.mid.sign-up-btn Get Started
@@ -59,6 +80,7 @@ block content
           p We will let you know as soon as we go live.
 
 block scripts
+  script(src="//cdn.sublimevideo.net/js/vonwjwhx.js")
   script(src='https://sdk.auth0.com/auth0.js#client=zEYfpoFzUMEzilhkHilcWoNkrFfJ3hAI&amp;redirect_uri=https://app.auth0.com/callback')
   script(src='/components/jquery/jquery.min.js')
   script(src='/components/bootstrap/js/bootstrap-carousel.js')
