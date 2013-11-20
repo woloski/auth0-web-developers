@@ -88,8 +88,15 @@ body
 
   block scripts
 
-  script(src='https://sdk.auth0.com/auth0.js#client=zEYfpoFzUMEzilhkHilcWoNkrFfJ3hAI&amp;redirect_uri=https://app.auth0.com/callback')
   script(src='/js/base.js')
+
+  script(src="https://d19p4zemcycm7a.cloudfront.net/w2/auth0-widget-2.2.1.min.js")
+  script(type="text/javascript")
+    var widget = new Auth0Widget({
+      domain:         'auth0.auth0.com',
+      clientID:       'zEYfpoFzUMEzilhkHilcWoNkrFfJ3hAI',
+      callbackURL:    'https://app.auth0.com/callback'
+    });
 
 
   - if (!debug)

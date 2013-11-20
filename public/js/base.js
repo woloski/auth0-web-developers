@@ -1,16 +1,16 @@
 $('.sign-up-btn').on('click', function (e) {
   e.preventDefault();
   if (window._gaq) _gaq.push(['_trackEvent', 'Pricing', 'Click', 'Sign Up']);
-  window.Auth0.signIn({ onestep: true,
-                        title: 'Sign in with...' });
+      widget.signup();
+      $('.a0-footer').removeClass('a0-hide');
 });
 
 
 $('.sign-in-btn').on('click', function (e) {
   e.preventDefault();
   if (window._gaq) _gaq.push(['_trackEvent', 'Pricing', 'Click', 'Sign In']);
-  window.Auth0.signIn({ onestep: true,
-                        title: 'Sign in with...' });
+  widget.signin();
+  $('.a0-footer').removeClass('a0-hide');
 });
 
 $('#subscribe-newsletter').on('submit', function(e){
