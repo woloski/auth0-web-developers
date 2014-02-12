@@ -37,7 +37,11 @@ app.configure(function(){
 });
 
 app.get('/', function (req, res) {
-  res.render('index');
+  res.redirect('https://www.auth0.com');
+});
+
+app.get('/pricing', function (req, res) {
+  res.redirect('https://www.auth0.com/pricing');
 });
 
 app.get('/:page', function(req, res) {
